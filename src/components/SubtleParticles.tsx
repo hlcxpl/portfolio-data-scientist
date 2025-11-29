@@ -71,7 +71,7 @@ const SubtleParticles = () => {
         const maxDistance = 180;
 
         if (distance < maxDistance) {
-          // Attract to mouse (magnetic effect for dark hero section)
+          // Attract to mouse (magnetic effect)
           const force = (1 - distance / maxDistance) * 0.8;
           const angle = Math.atan2(dy, dx);
           particle.vx += Math.cos(angle) * force;
@@ -90,10 +90,10 @@ const SubtleParticles = () => {
         particle.x += particle.vx;
         particle.y += particle.vy;
 
-        // Draw particle
+        // Draw particle - darker for white background
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, 0.5)`;
+        ctx.fillStyle = `rgba(0, 0, 0, 0.4)`;
         ctx.fill();
 
         // Draw glow
@@ -105,15 +105,15 @@ const SubtleParticles = () => {
           particle.y,
           particle.size * 2.5
         );
-        gradient.addColorStop(0, 'rgba(255, 255, 255, 0.3)');
-        gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+        gradient.addColorStop(0, 'rgba(0, 0, 0, 0.25)');
+        gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size * 2.5, 0, Math.PI * 2);
         ctx.fill();
       });
 
-      // Draw connections
+      // Draw connections - darker for white background
       particlesRef.current.forEach((p1, i) => {
         particlesRef.current.slice(i + 1).forEach((p2) => {
           const dx = p1.x - p2.x;
@@ -125,7 +125,7 @@ const SubtleParticles = () => {
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
             const opacity = (1 - distance / 150);
-            ctx.strokeStyle = `rgba(255, 255, 255, ${0.15 * opacity})`;
+            ctx.strokeStyle = `rgba(0, 0, 0, ${0.12 * opacity})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }

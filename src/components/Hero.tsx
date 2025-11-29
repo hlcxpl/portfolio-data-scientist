@@ -11,8 +11,8 @@ const Hero = ({ onNavigate }: HeroProps) => {
 
   return (
     <section className="relative h-full flex">
-      {/* Left side - Dark background with image and particles */}
-      <div className="w-full lg:w-1/2 bg-[#1a1a1a] dark:bg-[#0a0a0a] relative flex items-center justify-center">
+      {/* Left side - Light background with image and particles */}
+      <div className="w-full lg:w-1/2 bg-white dark:bg-[#f5f5f5] relative flex items-center justify-center">
         <SubtleParticles />
         <div className="relative z-10 p-12">
           <img 
@@ -23,7 +23,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
         </div>
         
         {/* Copyright */}
-        <div className="absolute bottom-8 left-8 text-white/50 text-sm">
+        <div className="absolute bottom-8 left-8 text-black/40 text-sm">
           Copyright © {new Date().getFullYear()}
         </div>
 
@@ -33,7 +33,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
             href="https://github.com/hlcxpl" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-white/70 hover:text-white transition-colors"
+            className="text-black/60 hover:text-black transition-colors"
           >
             <Github className="h-5 w-5" />
           </a>
@@ -41,13 +41,13 @@ const Hero = ({ onNavigate }: HeroProps) => {
             href="https://www.linkedin.com/in/luisomarsanchezdiaz/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-white/70 hover:text-white transition-colors"
+            className="text-black/60 hover:text-black transition-colors"
           >
             <Linkedin className="h-5 w-5" />
           </a>
           <a 
             href="mailto:hlcxpl@gmail.com"
-            className="text-white/70 hover:text-white transition-colors"
+            className="text-black/60 hover:text-black transition-colors"
           >
             <Mail className="h-5 w-5" />
           </a>
