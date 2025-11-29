@@ -109,6 +109,12 @@ All colors MUST be HSL.
 
   .gradient-text {
     @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
   }
 
   .gradient-bg {
@@ -117,5 +123,11 @@ All colors MUST be HSL.
 
   .glow-effect {
     box-shadow: var(--shadow-glow);
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: var(--shadow-glow); }
+    50% { box-shadow: 0 0 60px hsl(185 84% 55% / 0.4); }
   }
 }
