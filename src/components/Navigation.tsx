@@ -38,7 +38,7 @@ const Navigation = ({ currentSection, onSectionChange }: NavigationProps) => {
           <button 
             onClick={() => handleNavClick("hero")}
             className={`text-2xl font-display font-bold cursor-pointer transition-colors ${
-              isHeroSection ? 'text-white' : 'text-foreground'
+              isHeroSection ? 'text-foreground' : 'text-foreground'
             }`}
           >
             LOSD
@@ -52,8 +52,8 @@ const Navigation = ({ currentSection, onSectionChange }: NavigationProps) => {
                 onClick={() => handleNavClick(item.id)}
                 className={`text-sm tracking-wider transition-colors font-medium cursor-pointer ${
                   currentSection === item.id 
-                    ? (isHeroSection ? 'text-white' : 'text-foreground')
-                    : (isHeroSection ? 'text-white/60 hover:text-white' : 'text-muted-foreground hover:text-foreground')
+                    ? 'text-foreground'
+                    : 'text-muted-foreground hover:text-foreground'
                 }`}
               >
                 {item.label}
@@ -64,9 +64,7 @@ const Navigation = ({ currentSection, onSectionChange }: NavigationProps) => {
             {mounted && (
               <button
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                className={`transition-colors ${
-                  isHeroSection ? 'text-white/60 hover:text-white' : 'text-muted-foreground hover:text-foreground'
-                }`}
+                className="text-muted-foreground hover:text-foreground transition-colors"
               >
                 {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               </button>
@@ -76,9 +74,7 @@ const Navigation = ({ currentSection, onSectionChange }: NavigationProps) => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`md:hidden transition-colors ${
-              isHeroSection ? 'text-white' : 'text-foreground'
-            }`}
+            className="md:hidden transition-colors text-foreground"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
