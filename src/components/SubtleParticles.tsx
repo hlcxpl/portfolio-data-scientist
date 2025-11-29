@@ -21,20 +21,23 @@ const SubtleParticles = () => {
     if (!ctx) return;
 
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      const parent = canvas.parentElement;
+      if (parent) {
+        canvas.width = parent.offsetWidth;
+        canvas.height = parent.offsetHeight;
+      }
     };
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
     // Initialize fewer particles for subtle effect
-    const particleCount = Math.floor((canvas.width * canvas.height) / 40000);
+    const particleCount = Math.floor((canvas.width * canvas.height) / 30000);
     particlesRef.current = Array.from({ length: particleCount }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.2,
-      vy: (Math.random() - 0.5) * 0.2,
-      size: Math.random() * 1.5 + 0.5,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: (Math.random() - 0.5) * 0.3,
+      size: Math.random() * 2 + 0.5,
     }));
 
     const animate = () => {
@@ -51,7 +54,7 @@ const SubtleParticles = () => {
 
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0, 0, 0, 0.15)`;
+        ctx.fillStyle = `rgba(255, 255, 255, 0.2)`;
         ctx.fill();
       });
 
@@ -62,11 +65,11 @@ const SubtleParticles = () => {
           const dy = p1.y - p2.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) {
+          if (distance < 120) {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(0, 0, 0, ${0.05 * (1 - distance / 100)})`;
+            ctx.strokeStyle = `rgba(255, 255, 255, ${0.08 * (1 - distance / 120)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -90,7 +93,6 @@ const SubtleParticles = () => {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 pointer-events-none"
-      style={{ opacity: 0.6 }}
     />
   );
 };

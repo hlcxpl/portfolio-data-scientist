@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import SubtleParticles from "./SubtleParticles";
 import profileImage from "@/assets/profile-professional.jpg";
 
@@ -10,80 +10,76 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      <SubtleParticles />
-      
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left side - Image */}
-          <div className="order-2 lg:order-1 animate-fade-in">
-            <div className="relative">
-              <img 
-                src={profileImage}
-                alt="Luis Omar Sánchez"
-                className="w-full max-w-lg mx-auto grayscale hover:grayscale-0 transition-all duration-700"
-              />
-            </div>
-          </div>
+    <section className="relative min-h-screen flex">
+      {/* Left side - Dark background with image and particles */}
+      <div className="w-full lg:w-1/2 bg-[#1a1a1a] relative flex items-center justify-center">
+        <SubtleParticles />
+        <div className="relative z-10 p-12">
+          <img 
+            src={profileImage}
+            alt="Luis Omar Sánchez"
+            className="w-full max-w-md mx-auto"
+          />
+        </div>
+        
+        {/* Copyright */}
+        <div className="absolute bottom-8 left-8 text-white/50 text-sm">
+          Copyright © {new Date().getFullYear()}
+        </div>
 
-          {/* Right side - Content */}
-          <div className="order-1 lg:order-2 animate-fade-in-up">
-            <h2 className="text-lg md:text-xl text-muted-foreground mb-6 tracking-wider">
-              Hola, soy
-            </h2>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold mb-6 leading-tight">
-              LUIS OMAR
-              <br />
-              SÁNCHEZ
-            </h1>
-            <div className="mb-8">
-              <span className="text-xl md:text-2xl text-muted-foreground">
-                Desarrollador <span className="font-display font-semibold text-foreground">Fullstack</span>
-              </span>
-            </div>
-            
-            <Button 
-              size="lg" 
-              className="bg-foreground text-background hover:bg-foreground/90 text-lg px-12 py-6 rounded-none font-medium tracking-wide"
-              onClick={() => scrollToSection("contact")}
-            >
-              Contactar
-            </Button>
-
-            <div className="flex gap-6 mt-12">
-              <a 
-                href="https://github.com/hlcxpl" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Github className="h-6 w-6" />
-              </a>
-              <a 
-                href="https://www.linkedin.com/in/luisomarsanchezdiaz/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Linkedin className="h-6 w-6" />
-              </a>
-              <a 
-                href="mailto:hlcxpl@gmail.com"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Mail className="h-6 w-6" />
-              </a>
-            </div>
-          </div>
+        {/* Social Icons */}
+        <div className="absolute bottom-8 right-8 flex gap-4">
+          <a 
+            href="https://github.com/hlcxpl" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-white/70 hover:text-white transition-colors"
+          >
+            <Github className="h-5 w-5" />
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/luisomarsanchezdiaz/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-white/70 hover:text-white transition-colors"
+          >
+            <Linkedin className="h-5 w-5" />
+          </a>
+          <a 
+            href="mailto:hlcxpl@gmail.com"
+            className="text-white/70 hover:text-white transition-colors"
+          >
+            <Mail className="h-5 w-5" />
+          </a>
         </div>
       </div>
 
-      <button 
-        onClick={() => scrollToSection("about")}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-foreground animate-bounce cursor-pointer"
-      >
-        <ArrowDown className="h-6 w-6" />
-      </button>
+      {/* Right side - Content */}
+      <div className="w-full lg:w-1/2 bg-background flex items-center justify-center p-12 lg:p-20">
+        <div className="max-w-xl">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-display font-bold mb-8 leading-[0.9] tracking-tight">
+            LUIS OMAR
+            <br />
+            SÁNCHEZ
+          </h1>
+          <div className="mb-12">
+            <p className="text-muted-foreground text-lg mb-2">
+              Desarrollador
+            </p>
+            <p className="text-2xl font-display font-semibold">
+              Fullstack
+            </p>
+          </div>
+          
+          <Button 
+            size="lg" 
+            className="bg-foreground text-background hover:bg-foreground/90 text-base px-10 py-6 rounded-none font-medium tracking-wide"
+            onClick={() => scrollToSection("contact")}
+          >
+            Contactar
+          </Button>
+        </div>
+      </div>
     </section>
   );
 };
