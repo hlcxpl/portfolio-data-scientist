@@ -33,7 +33,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: "Ubicación",
-      value: "Maracaibo, Venezuela",
+      value: "Santiago, Chile",
       href: null
     },
     {

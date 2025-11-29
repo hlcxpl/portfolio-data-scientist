@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Code2, Rocket, Users } from "lucide-react";
-import profileImage from "@/assets/profile.jpg";
+import profileImage from "@/assets/profile-enhanced.jpg";
 
 const About = () => {
   const highlights = [
@@ -48,7 +48,7 @@ const About = () => {
               Ingeniero en Computación
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Egresado de la Universidad Dr. Rafael Belloso Chacín, Maracaibo Edo-Zulia (2017).
+              Egresado de la Universidad Dr. Rafael Belloso Chacín (2017). Actualmente en Santiago, Chile.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Con más de 5 años de experiencia en el desarrollo web, me especializo en tecnologías 
