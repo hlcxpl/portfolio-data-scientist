@@ -36,7 +36,7 @@ const Navigation = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           <button 
             onClick={() => scrollToSection("hero")}
@@ -51,7 +51,8 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-sm tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium cursor-pointer uppercase"
+                className="text-sm tracking-wider hover:text-foreground transition-colors font-medium cursor-pointer"
+                style={{ color: isScrolled ? undefined : 'rgba(255,255,255,0.8)' }}
               >
                 {item.label}
               </button>
@@ -61,7 +62,8 @@ const Navigation = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-foreground hover:text-muted-foreground transition-colors"
+            className="md:hidden hover:opacity-70 transition-opacity"
+            style={{ color: isScrolled ? undefined : 'rgba(255,255,255,0.8)' }}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
