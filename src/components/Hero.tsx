@@ -28,7 +28,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
         </div>
 
         {/* Social Icons */}
-        <div className="absolute bottom-4 md:bottom-8 right-4 md:right-8 flex gap-3 md:gap-4">
+        <div className="absolute top-4 right-4 md:bottom-8 md:top-auto md:right-8 flex flex-col md:flex-row gap-3 md:gap-4">
           <a
             href="https://github.com/hlcxpl"
             target="_blank"
