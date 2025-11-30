@@ -6,7 +6,6 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
 
 const Index = () => {
   const [currentSection, setCurrentSection] = useState("hero");
@@ -118,12 +117,6 @@ const Index = () => {
           );
         })}
       </main>
-      
-      {currentSection === "contact" && (
-        <div className="fixed bottom-0 left-0 right-0 z-40 bg-background border-t border-border">
-          <Footer />
-        </div>
-      )}
     </div>
   );
 };

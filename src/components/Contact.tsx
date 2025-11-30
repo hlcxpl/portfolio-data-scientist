@@ -188,6 +188,13 @@ const Contact = () => {
             </form>
           </div>
         </div>
+
+        {/* Copyright section */}
+        <div className="mt-20 pt-8 border-t border-border text-center">
+          <p className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} Luis Omar Sánchez. Todos los derechos reservados.
+          </p>
+        </div>
       </div>
     </section>
   );
