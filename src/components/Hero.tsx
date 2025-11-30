@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
 import SubtleParticles from "./SubtleParticles";
-import profileImage from "@/assets/profile-new.jpg";
+import profileImage from "@/assets/Luis_2.png";
 
 interface HeroProps {
   onNavigate: (section: string) => void;

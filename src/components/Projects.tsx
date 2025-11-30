@@ -1,6 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import BackgroundParticles from "./BackgroundParticles";
+import culliganImg from "@/assets/culligan.png";
+import globalConexusImg from "@/assets/global-conexus.png";
+import antofagastaImg from "@/assets/antofagasta-minerals.png";
+import cognitivaImg from "@/assets/cognitiva.png";
+import wiseVisionImg from "@/assets/wise-vision.png";
+import parkfacilImg from "@/assets/parkfacil.png";
 
 const Projects = () => {
   const projects = [
@@ -8,7 +14,7 @@ const Projects = () => {
       title: "ParkFacil - Gestión de Estacionamientos",
       description: "Plataforma completa para optimizar la administración de estacionamientos. Incluye módulos de reportería, gestión de datos SQL Server, y CI/CD con GitHub Actions.",
       tags: ["Node.js", "SQL Server", "GitHub Actions", "PM2"],
-      image: "https://www.parkfacil.cl/img/logo.png",
+      image: parkfacilImg,
       github: null,
       demo: null
     },
@@ -16,7 +22,7 @@ const Projects = () => {
       title: "Culligan Water - Suite de Aplicaciones",
       description: "Desarrollo de múltiples herramientas: 4DX para OKRs, sistema de inventario de dispensadores, módulo de contabilidad de activos, planificación de rutas y sistema de bonificaciones para técnicos.",
       tags: ["React", "Node.js", "Prisma", "SQL", "Agile"],
-      image: "https://upload.wikimedia.org/wikipedia/commons/5/51/Culligan_Logo_2024.jpg",
+      image: culliganImg,
       github: null,
       demo: null
     },
@@ -24,7 +30,7 @@ const Projects = () => {
       title: "IoT Mining Platform - Global Conexus",
       description: "Plataforma IoT para telemetría de equipos mineros. Procesamiento de datos en tiempo real con Apache Kafka, dashboards React y servicios backend en Java.",
       tags: ["Java", "Apache Kafka", "React", "Azure", "IoT"],
-      image: "https://www.globalconexus.com/wp-content/uploads/2021/10/GlobalCo_weblogo1.png",
+      image: globalConexusImg,
       github: null,
       demo: null
     },
@@ -32,7 +38,7 @@ const Projects = () => {
       title: "Mining Analytics Dashboard",
       description: "Dashboards interactivos con Dash (Plotly) para análisis operativo minero. Integración con Azure Data Lake y algoritmos de optimización para planes de excavadoras.",
       tags: ["Python", "Dash", "Flask", "Azure", "Data Analytics"],
-      image: "https://web.pelambres.cl/wp-content/uploads/2023/11/pelambres-antofagasta-minerals.jpg",
+      image: antofagastaImg,
       github: null,
       demo: null
     },
@@ -40,7 +46,7 @@ const Projects = () => {
       title: "Cognitiva - Plataforma de Agentes IA",
       description: "Plataforma de gestión de campañas con agentes conversacionales personalizables. Integración con Watson Assistant, Rasa NLU y OpenAI APIs.",
       tags: ["Node.js", "React", "Python", "IBM Watson", "OpenAI"],
-      image: "https://www.siliconweek.com/wp-content/uploads/2017/07/Cognitiva-IBM-Watson.jpg",
+      image: cognitivaImg,
       github: null,
       demo: null
     },
@@ -48,7 +54,7 @@ const Projects = () => {
       title: "ELK Stack Monitoring - WISE VISION",
       description: "Clusters de Elasticsearch para monitoreo en tiempo real de servicios e infraestructura. Configuración de índices, alertas con Logstash, FluentBit y Kibana.",
       tags: ["Elasticsearch", "Logstash", "Kibana", "DevOps"],
-      image: "https://logit.io/wp-content/uploads/2021/04/image-13.png",
+      image: wiseVisionImg,
       github: "https://github.com/hlcxpl/elk-template",
       demo: null
     },
