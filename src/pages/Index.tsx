@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import type React from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
@@ -24,7 +24,7 @@ const Index = () => {
   };
 
   // Función para cambiar de sección
-  const changeSection = (direction: 'next' | 'prev') => {
+  const changeSection = useCallback((direction: 'next' | 'prev') => {
     if (isScrolling) return;
     
     const currentIndex = sectionOrder.indexOf(currentSection as (typeof sectionOrder)[number]);
@@ -38,7 +38,7 @@ const Index = () => {
       setCurrentSection(sectionOrder[currentIndex - 1]);
       setTimeout(() => setIsScrolling(false), 700);
     }
-  };
+  }, [currentSection, isScrolling]);
 
   const handleSectionWheel = (sectionKey: string) => (e: React.WheelEvent<HTMLDivElement>) => {
     const container = e.currentTarget;
@@ -112,7 +112,7 @@ const Index = () => {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [currentSection, isScrolling]);
+  }, [changeSection, isScrolling]);
 
   return (
     <div className="min-h-screen bg-background">
