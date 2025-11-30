@@ -8,7 +8,7 @@ const Projects = () => {
       title: "ParkFacil - Gestión de Estacionamientos",
       description: "Plataforma completa para optimizar la administración de estacionamientos. Incluye módulos de reportería, gestión de datos SQL Server, y CI/CD con GitHub Actions.",
       tags: ["Node.js", "SQL Server", "GitHub Actions", "PM2"],
-      image: "https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=800&h=500&fit=crop",
+      image: "https://www.parkfacil.cl/img/logo.png",
       github: null,
       demo: null
     },
@@ -16,7 +16,7 @@ const Projects = () => {
       title: "Culligan Water - Suite de Aplicaciones",
       description: "Desarrollo de múltiples herramientas: 4DX para OKRs, sistema de inventario de dispensadores, módulo de contabilidad de activos, planificación de rutas y sistema de bonificaciones para técnicos.",
       tags: ["React", "Node.js", "Prisma", "SQL", "Agile"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
+      image: "https://upload.wikimedia.org/wikipedia/commons/5/51/Culligan_Logo_2024.jpg",
       github: null,
       demo: null
     },
@@ -24,7 +24,7 @@ const Projects = () => {
       title: "IoT Mining Platform - Global Conexus",
       description: "Plataforma IoT para telemetría de equipos mineros. Procesamiento de datos en tiempo real con Apache Kafka, dashboards React y servicios backend en Java.",
       tags: ["Java", "Apache Kafka", "React", "Azure", "IoT"],
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=500&fit=crop",
+      image: "https://blog.3ds.com/wp-content/uploads/2019/10/IoT-4th-Industrial-Revolution-Mining-Industry-Dassault-Systemes-GEOVIA-Part-2-1.jpg",
       github: null,
       demo: null
     },
@@ -32,7 +32,7 @@ const Projects = () => {
       title: "Mining Analytics Dashboard",
       description: "Dashboards interactivos con Dash (Plotly) para análisis operativo minero. Integración con Azure Data Lake y algoritmos de optimización para planes de excavadoras.",
       tags: ["Python", "Dash", "Flask", "Azure", "Data Analytics"],
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
+      image: "https://web.pelambres.cl/wp-content/uploads/2023/11/pelambres-antofagasta-minerals.jpg",
       github: null,
       demo: null
     },
@@ -40,7 +40,7 @@ const Projects = () => {
       title: "Cognitiva - Plataforma de Agentes IA",
       description: "Plataforma de gestión de campañas con agentes conversacionales personalizables. Integración con Watson Assistant, Rasa NLU y OpenAI APIs.",
       tags: ["Node.js", "React", "Python", "IBM Watson", "OpenAI"],
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop",
+      image: "https://www.siliconweek.com/wp-content/uploads/2017/07/Cognitiva-IBM-Watson.jpg",
       github: null,
       demo: null
     },
@@ -48,7 +48,7 @@ const Projects = () => {
       title: "ELK Stack Monitoring - WISE VISION",
       description: "Clusters de Elasticsearch para monitoreo en tiempo real de servicios e infraestructura. Configuración de índices, alertas con Logstash, FluentBit y Kibana.",
       tags: ["Elasticsearch", "Logstash", "Kibana", "DevOps"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
+      image: "https://logit.io/wp-content/uploads/2021/04/image-13.png",
       github: "https://github.com/hlcxpl/elk-template",
       demo: null
     },

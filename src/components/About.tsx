@@ -46,7 +46,7 @@ const About = () => {
             que mejoran la satisfacción del usuario y la gestión de datos.
           </p>
           <p>
-            Con más de <span className="font-semibold text-foreground">7 años de experiencia profesional</span>, he trabajado en proyectos de alto impacto
+            Con más de <span className="font-semibold text-foreground">6+ años de experiencia profesional</span>, he trabajado en proyectos de alto impacto
             utilizando tecnologías como React, Node.js, Java, Python, Apache Kafka, y plataformas cloud
             como Azure. Mi enfoque está en crear soluciones robustas, escalables y orientadas al usuario.
           </p>
