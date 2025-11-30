@@ -4,7 +4,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Github, Linkedin } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import emailjs from '@emailjs/browser';
 import BackgroundParticles from "./BackgroundParticles";
 
 const Contact = () => {
@@ -21,22 +20,33 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      await emailjs.send(
-        'service_2e2iw4n',
-        'template_cxzr25i',
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
-        'WTaD6tGe4oGf6sepp'
-      );
-
-      toast({
-        title: "Mensaje enviado",
-        description: "Gracias por contactarme. Te responderé pronto.",
+        body: JSON.stringify({
+          access_key: "1efae5d0-a0c7-48e3-8b55-343f733db249",
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          from_name: formData.name,
+          subject: `Nuevo mensaje de ${formData.name} desde tu portafolio`,
+        }),
       });
-      setFormData({ name: "", email: "", message: "" });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Mensaje enviado",
+          description: "Gracias por contactarme. Te responderé pronto.",
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        throw new Error(result.message || "Error al enviar el mensaje");
+      }
     } catch (error) {
       console.error('Error sending email:', error);
       toast({
@@ -114,7 +124,7 @@ const Contact = () => {
                   );
 
                   return item.href ? (
-                    <a 
+                    <a
                       key={index}
                       href={item.href}
                       target={item.href.startsWith('http') ? '_blank' : undefined}
@@ -177,8 +187,8 @@ const Contact = () => {
                 />
               </div>
 
-              <Button 
-                type="submit" 
+              <Button
+                type="submit"
                 className="w-full bg-foreground text-background hover:bg-foreground/90 rounded-none py-5 md:py-6 text-sm md:text-base"
                 disabled={isSubmitting}
               >

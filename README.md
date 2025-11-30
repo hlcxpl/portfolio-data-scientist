@@ -1,73 +1,110 @@
-# Welcome to your Lovable project
+# Portfolio Personal
 
-## Project info
+Un portafolio web moderno y profesional construido con las últimas tecnologías de desarrollo frontend.
 
-**URL**: https://lovable.dev/projects/77b2baf1-b08d-4ec2-a976-3c3a18d672d3
+## 🚀 Sobre el Proyecto
 
-## How can I edit this code?
+Este es mi portafolio personal donde muestro mis proyectos, habilidades y experiencia como desarrollador. El sitio está diseñado con un enfoque en la experiencia del usuario, rendimiento y diseño moderno.
 
-There are several ways of editing your application.
+## ✨ Características
 
-**Use Lovable**
+- 🎨 Diseño moderno y responsivo
+- 🌙 Soporte para tema claro/oscuro
+- ⚡ Rendimiento optimizado con Vite
+- 📱 Totalmente responsive para todos los dispositivos
+- 🎯 Componentes reutilizables con shadcn-ui
+- 📧 Formulario de contacto funcional con EmailJS
+- 🔍 SEO optimizado
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/77b2baf1-b08d-4ec2-a976-3c3a18d672d3) and start prompting.
+## 🛠️ Tecnologías Utilizadas
 
-Changes made via Lovable will be committed automatically to this repo.
+Este proyecto está construido con:
 
-**Use your preferred IDE**
+- **[React](https://react.dev/)** - Biblioteca de JavaScript para construir interfaces de usuario
+- **[TypeScript](https://www.typescriptlang.org/)** - Superset tipado de JavaScript
+- **[Vite](https://vitejs.dev/)** - Build tool de nueva generación
+- **[Tailwind CSS](https://tailwindcss.com/)** - Framework de CSS utility-first
+- **[shadcn-ui](https://ui.shadcn.com/)** - Componentes de UI reutilizables y accesibles
+- **[React Router](https://reactrouter.com/)** - Enrutamiento para aplicaciones React
+- **[React Hook Form](https://react-hook-form.com/)** - Manejo de formularios con validación
+- **[Zod](https://zod.dev/)** - Validación de esquemas TypeScript-first
+- **[EmailJS](https://www.emailjs.com/)** - Servicio de envío de emails
+- **[Lucide React](https://lucide.dev/)** - Iconos modernos
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📦 Instalación y Uso
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Requisitos Previos
 
-Follow these steps:
+- Node.js (versión 18 o superior)
+- npm o bun
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Instalación
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+1. Clona el repositorio:
+```bash
+git clone <URL_DEL_REPOSITORIO>
 ```
 
-**Edit a file directly in GitHub**
+2. Navega al directorio del proyecto:
+```bash
+cd portfolio-polish
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3. Instala las dependencias:
+```bash
+npm install
+# o
+bun install
+```
 
-**Use GitHub Codespaces**
+4. Inicia el servidor de desarrollo:
+```bash
+npm run dev
+# o
+bun dev
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+5. Abre tu navegador en `http://localhost:5173`
 
-## What technologies are used for this project?
+### Scripts Disponibles
 
-This project is built with:
+- `npm run dev` - Inicia el servidor de desarrollo
+- `npm run build` - Construye la aplicación para producción
+- `npm run build:dev` - Construye la aplicación en modo desarrollo
+- `npm run preview` - Previsualiza la build de producción
+- `npm run lint` - Ejecuta el linter
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📁 Estructura del Proyecto
 
-## How can I deploy this project?
+```
+portfolio-polish/
+├── src/
+│   ├── components/     # Componentes reutilizables
+│   ├── pages/          # Páginas de la aplicación
+│   ├── hooks/          # Custom hooks
+│   ├── lib/            # Utilidades y configuraciones
+│   └── styles/         # Estilos globales
+├── public/             # Archivos estáticos
+└── index.html          # Punto de entrada HTML
+```
 
-Simply open [Lovable](https://lovable.dev/projects/77b2baf1-b08d-4ec2-a976-3c3a18d672d3) and click on Share -> Publish.
+## 🚀 Despliegue
 
-## Can I connect a custom domain to my Lovable project?
+El proyecto puede ser desplegado en cualquier plataforma que soporte aplicaciones estáticas:
 
-Yes, you can!
+- [Vercel](https://vercel.com/)
+- [Netlify](https://www.netlify.com/)
+- [GitHub Pages](https://pages.github.com/)
+- [Cloudflare Pages](https://pages.cloudflare.com/)
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📄 Licencia
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Este proyecto es de código abierto y está disponible bajo la licencia MIT.
+
+## 📧 Contacto
+
+Si tienes alguna pregunta o sugerencia, no dudes en contactarme.
+
+---
+
+⭐ Si te gusta este proyecto, ¡dale una estrella en GitHub!
