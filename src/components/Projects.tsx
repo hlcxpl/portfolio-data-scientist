@@ -24,7 +24,7 @@ const Projects = () => {
       title: "IoT Mining Platform - Global Conexus",
       description: "Plataforma IoT para telemetría de equipos mineros. Procesamiento de datos en tiempo real con Apache Kafka, dashboards React y servicios backend en Java.",
       tags: ["Java", "Apache Kafka", "React", "Azure", "IoT"],
-      image: "https://blog.3ds.com/wp-content/uploads/2019/10/IoT-4th-Industrial-Revolution-Mining-Industry-Dassault-Systemes-GEOVIA-Part-2-1.jpg",
+      image: "https://www.globalconexus.com/wp-content/uploads/2021/10/GlobalCo_weblogo1.png",
       github: null,
       demo: null
     },
