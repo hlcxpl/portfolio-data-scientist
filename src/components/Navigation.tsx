@@ -34,11 +34,11 @@ const Navigation = ({ currentSection, onSectionChange }: NavigationProps) => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 transition-colors duration-300">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between h-20">
+        <div className={`flex items-center h-20 ${isHeroSection ? 'justify-between' : 'justify-end'}`}>
           <button
             onClick={() => handleNavClick("hero")}
-            className={`text-2xl font-display font-bold cursor-pointer transition-colors ${isHeroSection ? 'text-foreground' : 'text-foreground hidden'
-              }`}
+            className={`text-2xl font-display font-bold cursor-pointer transition-colors ${isHeroSection ? 'text-foreground' : 'text-foreground hidden'}
+            `}
           >
             LOSD
           </button>
@@ -50,8 +50,8 @@ const Navigation = ({ currentSection, onSectionChange }: NavigationProps) => {
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
                 className={`text-sm tracking-wider transition-colors font-medium cursor-pointer ${currentSection === item.id
-                    ? 'text-foreground'
-                    : 'text-muted-foreground hover:text-foreground'
+                  ? 'text-foreground'
+                  : 'text-muted-foreground hover:text-foreground'
                   }`}
               >
                 {item.label}

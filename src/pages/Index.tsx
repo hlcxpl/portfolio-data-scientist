@@ -165,14 +165,14 @@ const Index = () => {
       <Navigation currentSection={currentSection} onSectionChange={setCurrentSection} />
 
       {/* Section indicators - más grandes en móvil */}
-      <div className="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-50 space-y-4 md:space-y-3">
+      <div className="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-40 space-y-4 md:space-y-3">
         {sectionOrder.map((section) => (
           <button
             key={section}
             onClick={() => setCurrentSection(section)}
             className={`block rounded-full transition-all duration-300 ${currentSection === section
-                ? "bg-foreground w-10 md:w-8 h-3 md:h-2"
-                : "bg-foreground/30 hover:bg-foreground/50 w-3 md:w-2 h-3 md:h-2"
+              ? "bg-foreground w-10 md:w-8 h-3 md:h-2"
+              : "bg-foreground/30 hover:bg-foreground/50 w-3 md:w-2 h-3 md:h-2"
               }`}
             aria-label={section}
           />
@@ -188,10 +188,10 @@ const Index = () => {
             <div
               key={key}
               className={`absolute inset-0 transition-all duration-700 ${currentSection === key
-                  ? "opacity-100 translate-x-0"
-                  : sectionIndex < currentIndex
-                    ? "opacity-0 -translate-x-full"
-                    : "opacity-0 translate-x-full"
+                ? "opacity-100 translate-x-0"
+                : sectionIndex < currentIndex
+                  ? "opacity-0 -translate-x-full"
+                  : "opacity-0 translate-x-full"
                 }`}
             >
               <div
