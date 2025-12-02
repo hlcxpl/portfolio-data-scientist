@@ -113,6 +113,7 @@ All colors MUST be HSL.
     display: inline-block;
   }
 
+
   .underline-accent::after {
     content: '';
     position: absolute;
@@ -121,5 +122,51 @@ All colors MUST be HSL.
     width: 80px;
     height: 3px;
     background: hsl(var(--foreground));
+  }
+
+  /* Enhanced Float Animation - More subtle and professional */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Gradient Border Rotation */
+  @keyframes rotate-gradient {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Pulse Effect */
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+
+  /* Shimmer Effect */
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
   }
 }

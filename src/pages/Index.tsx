@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
+import Certificates from "@/components/Certificates";
 import Contact from "@/components/Contact";
 
 const Index = () => {
@@ -14,13 +15,14 @@ const Index = () => {
   const touchStartRef = useRef<number>(0);
   const touchEndRef = useRef<number>(0);
 
-  const sectionOrder = ["hero", "about", "skills", "projects", "contact"] as const;
+  const sectionOrder = ["hero", "about", "projects", "skills", "certificates", "contact"] as const;
 
   const sections: Record<string, JSX.Element> = {
     hero: <Hero onNavigate={setCurrentSection} />,
     about: <About />,
-    skills: <Skills />,
     projects: <Projects />,
+    skills: <Skills />,
+    certificates: <Certificates />,
     contact: <Contact />,
   };
 
@@ -50,9 +52,9 @@ const Index = () => {
     const container = e.currentTarget;
     const { scrollTop, scrollHeight, clientHeight } = container;
 
-    // Detección más estricta de límites (1 pixel de tolerancia)
-    const atTop = scrollTop <= 1;
-    const atBottom = Math.abs(scrollHeight - clientHeight - scrollTop) <= 1;
+    // Detección más estricta de límites (2 pixel de tolerancia)
+    const atTop = scrollTop <= 2;
+    const atBottom = Math.abs(scrollHeight - clientHeight - scrollTop) <= 2;
 
     // Habilitar navegación SOLO si estamos exactamente en un límite
     if (atTop || atBottom) {
@@ -114,9 +116,9 @@ const Index = () => {
     const container = e.currentTarget;
     const { scrollTop, scrollHeight, clientHeight } = container;
 
-    // Detección más estricta de límites (1 pixel de tolerancia)
-    const atTop = scrollTop <= 1;
-    const atBottom = Math.abs(scrollHeight - clientHeight - scrollTop) <= 1;
+    // Detección más estricta de límites (2 pixel de tolerancia)
+    const atTop = scrollTop <= 2;
+    const atBottom = Math.abs(scrollHeight - clientHeight - scrollTop) <= 2;
 
     // Habilitar navegación SOLO si estamos exactamente en un límite
     if (atTop || atBottom) {

@@ -202,7 +202,7 @@ const Contact = () => {
         {/* Copyright section */}
         <div className="mt-12 md:mt-20 pt-6 md:pt-8 border-t border-border text-center">
           <p className="text-xs md:text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Luis Omar Sánchez. Todos los derechos reservados.
+            Created by Luis Omar Sánchez
           </p>
         </div>
       </div>

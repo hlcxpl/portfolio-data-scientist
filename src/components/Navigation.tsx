@@ -37,8 +37,10 @@ const Navigation = ({ currentSection, onSectionChange }: NavigationProps) => {
         <div className={`flex items-center h-20 ${isHeroSection ? 'justify-between' : 'justify-end'}`}>
           <button
             onClick={() => handleNavClick("hero")}
-            className={`text-2xl font-display font-bold cursor-pointer transition-colors ${isHeroSection ? 'text-black md:text-foreground' : 'text-foreground hidden'}
-            `}
+            className={`text-2xl font-display font-bold cursor-pointer transition-colors ${isHeroSection
+                ? 'text-black dark:!text-black'
+                : 'text-foreground hidden'
+              }`}
           >
             LOSD
           </button>
@@ -72,7 +74,7 @@ const Navigation = ({ currentSection, onSectionChange }: NavigationProps) => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`md:hidden transition-colors ${isHeroSection ? 'text-black' : 'text-foreground'}`}
+            className={`md:hidden transition-colors ${isHeroSection ? 'text-black dark:!text-black' : 'text-foreground'}`}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>

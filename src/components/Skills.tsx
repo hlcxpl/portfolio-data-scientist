@@ -1,32 +1,124 @@
-import { Code2, Server, Database, Cloud, Terminal, Bot } from "lucide-react";
 import BackgroundParticles from "./BackgroundParticles";
 
+interface Skill {
+  name: string;
+  slug?: string; // for skillicons.dev
+  customUrl?: string; // for other sources
+  color?: string;
+}
+
+interface SkillCategory {
+  title: string;
+  skills: Skill[];
+}
+
 const Skills = () => {
-  const skillCategories = [
+  const skillCategories: SkillCategory[] = [
     {
-      icon: Code2,
       title: "Frontend",
-      skills: ["React", "Vue.js", "JavaScript", "TypeScript", "HTML5", "CSS3", "Sass", "Tailwind CSS", "shadcn/ui", "Material UI", "Magic UI", "Dash (Plotly)", "WordPress", "Elementor"]
+      skills: [
+        { name: "React", slug: "react" },
+        { name: "Next.js", slug: "nextjs" },
+        { name: "HTML5", slug: "html" },
+        { name: "CSS3", slug: "css" },
+        { name: "Sass", customUrl: "https://cdn.simpleicons.org/sass" },
+        { name: "Less", slug: "less" },
+        { name: "Bootstrap", slug: "bootstrap" },
+        { name: "Tailwind CSS", slug: "tailwindcss" },
+        { name: "Material UI", slug: "materialui" },
+        { name: "TypeScript", slug: "ts" },
+        { name: "JavaScript", slug: "js" },
+      ]
     },
     {
-      icon: Server,
       title: "Backend",
-      skills: ["Node.js", "Nest.js", ".NET", "Python", "Java", "Spring Boot", "Django", "Flask", "Express.js"]
+      skills: [
+        { name: "Node.js", slug: "nodejs" },
+        { name: "Express", slug: "express" },
+        { name: "NestJS", slug: "nestjs" },
+        { name: "Java", slug: "java" },
+        { name: "Spring Boot", slug: "spring" },
+        { name: "Python", slug: "python" },
+        { name: "Flask", slug: "flask" },
+        { name: "Django", slug: "django" },
+        { name: "Kafka", slug: "kafka" },
+      ]
     },
     {
-      icon: Database,
-      title: "Bases de Datos & Cloud",
-      skills: ["AWS", "DynamoDB", "Lambda", "SAM", "MongoDB", "PostgreSQL", "MySQL", "SQL Server", "Prisma", "Azure", "Azure Data Lake", "Azure Functions"]
+      title: "Cloud & Infra",
+      skills: [
+        { name: "AWS", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
+        { name: "Azure", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" },
+        { name: "Heroku", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg" },
+        { name: "Netlify", slug: "netlify" },
+        { name: "Railway", customUrl: "https://cdn.simpleicons.org/railway" },
+      ]
     },
     {
-      icon: Terminal,
-      title: "DevOps & Observabilidad",
-      skills: ["Docker", "Kubernetes", "Jenkins", "ArgoCD", "GitHub Actions", "ELK Stack", "Prometheus", "Grafana", "PM2", "Git"]
+      title: "Databases & ORMs",
+      skills: [
+        { name: "MySQL", slug: "mysql" },
+        { name: "PostgreSQL", slug: "postgres" },
+        { name: "MongoDB", slug: "mongodb" },
+        { name: "SQLite", slug: "sqlite" },
+        { name: "Oracle", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" },
+        { name: "MariaDB", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mariadb/mariadb-original.svg" },
+        { name: "Sequelize", slug: "sequelize" },
+        { name: "Prisma", slug: "prisma" },
+        { name: "SQLAlchemy", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original.svg" },
+        { name: "Hibernate", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-plain.svg" },
+      ]
     },
     {
-      icon: Bot,
-      title: "Automatización & Herramientas",
-      skills: ["MCP", "n8n", "Make", "Lovable", "VS Code", "Antigravity", "OpenAI API", "IBM Watson", "Rasa NLU"]
+      title: "DevOps & Automation",
+      skills: [
+        { name: "Docker", slug: "docker" },
+        { name: "Kubernetes", slug: "kubernetes" },
+        { name: "Terraform", slug: "terraform" },
+        { name: "Ansible", slug: "ansible" },
+        { name: "Linux", slug: "linux" },
+        { name: "Git", slug: "git" },
+        { name: "Bash", slug: "bash" },
+        { name: "Helm", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/helm/helm-original.svg" },
+        { name: "ArgoCD", customUrl: "https://cdn.simpleicons.org/argo/EF7B4D" },
+        { name: "GitHub Actions", slug: "githubactions" },
+        { name: "Jenkins", slug: "jenkins" },
+        { name: "GitLab", slug: "gitlab" },
+        { name: "JMeter", customUrl: "https://cdn.simpleicons.org/apachejmeter" },
+      ]
+    },
+    {
+      title: "Data Science & AI",
+      skills: [
+        { name: "Pandas", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
+        { name: "Numpy", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
+        { name: "Jupyter", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
+        { name: "TensorFlow", slug: "tensorflow" },
+        { name: "OpenCV", slug: "opencv" },
+      ]
+    },
+    {
+      title: "Monitoring",
+      skills: [
+        { name: "Grafana", slug: "grafana" },
+        { name: "Prometheus", slug: "prometheus" },
+        { name: "Elasticsearch", slug: "elasticsearch" },
+        { name: "Splunk", customUrl: "https://cdn.simpleicons.org/splunk/000000" },
+        { name: "Instana", customUrl: "https://static.cdnlogo.com/logos/i/55/instana-inc.svg" },
+      ]
+    },
+    {
+      title: "Tools & IDEs",
+      skills: [
+        { name: "VS Code", slug: "vscode" },
+        { name: "Eclipse", slug: "eclipse" },
+        { name: "Sublime", slug: "sublime" },
+        { name: "IntelliJ IDEA", slug: "idea" },
+        { name: "PyCharm", slug: "pycharm" },
+        { name: "NPM", slug: "npm" },
+        { name: "Yarn", slug: "yarn" },
+        { name: "PNPM", slug: "pnpm" },
+      ]
     }
   ];
 
@@ -34,43 +126,48 @@ const Skills = () => {
     <section className="min-h-full py-12 md:py-20 px-4 md:px-6 lg:px-12 bg-secondary/30 dark:bg-secondary/10 relative">
       <BackgroundParticles />
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="mb-12 md:mb-20 animate-fade-in-up">
+        <div className="mb-12 md:mb-20 animate-fade-in-up text-center md:text-left">
           <h2 className="text-xs md:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4">
             Habilidades
           </h2>
-          <div className="w-12 md:w-16 h-[2px] bg-foreground mb-6 md:mb-8"></div>
+          <div className="w-12 md:w-16 h-[2px] bg-foreground mb-6 md:mb-8 mx-auto md:mx-0"></div>
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold">
             Stack Tecnológico
           </h3>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-          {skillCategories.map((category, index) => {
-            const Icon = category.icon;
-            return (
-              <div
-                key={index}
-                className="group"
-              >
-                <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6">
-                  <Icon className="h-6 w-6 md:h-7 md:w-7 text-foreground" strokeWidth={1.5} />
-                  <h3 className="text-lg md:text-xl font-display font-bold text-foreground">{category.title}</h3>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill, skillIndex) => (
-                    <span
-                      key={skillIndex}
-                      className="px-2.5 md:px-3 py-1 md:py-1.5 border border-border text-foreground text-xs md:text-sm hover:bg-foreground hover:text-background transition-colors cursor-default"
-                    >
-                      {skill}
+        <div className="space-y-16">
+          {skillCategories.map((category, index) => (
+            <div key={index} className="animate-fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
+              <h4 className="text-xl md:text-2xl font-display font-bold mb-8 text-center md:text-left border-b border-border/50 pb-2 inline-block">
+                {category.title}
+              </h4>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
+                {category.skills.map((skill, skillIndex) => (
+                  <div
+                    key={skillIndex}
+                    className="group relative flex flex-col items-center justify-center p-4 md:p-6 bg-background/50 backdrop-blur-sm border border-border/50 rounded-xl hover:border-foreground/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                  >
+                    <div className="w-10 h-10 md:w-12 md:h-12 mb-3 md:mb-4 relative flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <img
+                        src={skill.customUrl || `https://skillicons.dev/icons?i=${skill.slug}`}
+                        alt={skill.name}
+                        className="w-full h-full object-contain transition-all duration-300 opacity-90 group-hover:opacity-100"
+                        onError={(e) => {
+                          // Fallback if icon fails
+                          (e.target as HTMLImageElement).style.display = 'none';
+                        }}
+                      />
+                    </div>
+                    <span className="text-xs md:text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors text-center">
+                      {skill.name}
                     </span>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
-
       </div>
     </section>
   );
