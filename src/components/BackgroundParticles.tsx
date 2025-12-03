@@ -47,10 +47,10 @@ const BackgroundParticles = ({ variant = 'light' }: BackgroundParticlesProps) =>
       return {
         x,
         y,
-        baseX: x,
+        baseX: x, // Keep for type compatibility if needed, but unused
         baseY: y,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
+        vx: (Math.random() - 0.5) * 1.5, // Faster base speed
+        vy: (Math.random() - 0.5) * 1.5,
         size: Math.random() * 2 + 1,
       };
     });
@@ -84,21 +84,25 @@ const BackgroundParticles = ({ variant = 'light' }: BackgroundParticlesProps) =>
           // Repel from mouse
           const force = (maxDistance - distance) / maxDistance;
           const angle = Math.atan2(dy, dx);
-          particle.vx -= Math.cos(angle) * force * 1.2;
-          particle.vy -= Math.sin(angle) * force * 1.2;
+          particle.vx -= Math.cos(angle) * force * 0.5;
+          particle.vy -= Math.sin(angle) * force * 0.5;
         }
 
-        // Return to base position
-        particle.vx += (particle.baseX - particle.x) * 0.02;
-        particle.vy += (particle.baseY - particle.y) * 0.02;
-
-        // Apply friction
-        particle.vx *= 0.95;
-        particle.vy *= 0.95;
-
-        // Update position
+        // Move particle
         particle.x += particle.vx;
         particle.y += particle.vy;
+
+        // Boundary checks (bounce)
+        if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
+        if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
+
+        // Limit speed
+        const speed = Math.sqrt(particle.vx * particle.vx + particle.vy * particle.vy);
+        const maxSpeed = 2;
+        if (speed > maxSpeed) {
+          particle.vx = (particle.vx / speed) * maxSpeed;
+          particle.vy = (particle.vy / speed) * maxSpeed;
+        }
 
         // Draw particle
         ctx.beginPath();

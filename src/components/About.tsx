@@ -1,20 +1,20 @@
-import { Code2, Rocket, Users } from "lucide-react";
+import { GraduationCap, Code, Briefcase } from "lucide-react";
 import BackgroundParticles from "./BackgroundParticles";
 
 const About = () => {
   const highlights = [
     {
-      icon: Code2,
+      icon: GraduationCap,
       title: "Desarrollo Web",
       description: "Especializado en crear aplicaciones web modernas y escalables con las últimas tecnologías."
     },
     {
-      icon: Rocket,
+      icon: Code,
       title: "Innovación",
       description: "Siempre buscando nuevas formas de resolver problemas y optimizar procesos."
     },
     {
-      icon: Users,
+      icon: Briefcase,
       title: "Liderazgo",
       description: "Experiencia liderando equipos y proyectos de desarrollo en el sector privado."
     }
@@ -40,15 +40,11 @@ const About = () => {
             Actualmente en Santiago, Chile.
           </p>
           <p>
-            Desarrollador Full Stack con experiencia en la optimización de procesos en la industria minera,
-            incorporando tecnologías innovadoras para mejorar la eficiencia operativa. Especialista en
-            soluciones bancarias digitales, con habilidad para implementar sistemas seguros y escalables
-            que mejoran la satisfacción del usuario y la gestión de datos.
+            Profesional con más de <span className="font-semibold text-foreground">6+ años de experiencia profesional</span> desarrollando soluciones tecnológicas escalables para distintos sectores, incluyendo minería, banca y servicios digitales. He trabajado en la construcción de plataformas web, automatización de procesos y despliegues en la nube, integrando buenas prácticas de arquitectura, seguridad y rendimiento.
           </p>
           <p>
-            Con más de <span className="font-semibold text-foreground">6+ años de experiencia profesional</span>, he trabajado en proyectos de alto impacto
-            utilizando tecnologías como React, Node.js, Java, Python, Apache Kafka, y plataformas cloud
-            como Azure. Mi enfoque está en crear soluciones robustas, escalables y orientadas al usuario.
+            Domino tecnologías como React, Node.js, Python, Java, Docker, Kubernetes, GitHub Actions, Jenkins, Kafka y entornos cloud (Azure, AWS, Cloudflare).
+            Mi enfoque es entregar soluciones robustas, eficientes y orientadas a la experiencia del usuario.
           </p>
         </div>
 

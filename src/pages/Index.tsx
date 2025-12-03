@@ -162,9 +162,28 @@ const Index = () => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [changeSection, isScrolling]);
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const sectionRefs = useRef<Record<string, HTMLDivElement | null>>({});
+
+  // Update scroll state when section changes
+  useEffect(() => {
+    const currentContainer = sectionRefs.current[currentSection];
+    if (currentContainer) {
+      setIsScrolled(currentContainer.scrollTop > 50);
+    } else {
+      setIsScrolled(false);
+    }
+  }, [currentSection]);
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const scrollTop = e.currentTarget.scrollTop;
+    setIsScrolled(scrollTop > 50);
+  };
+
   return (
     <div className="min-h-screen bg-background">
-      <Navigation currentSection={currentSection} onSectionChange={setCurrentSection} />
+      <Navigation currentSection={currentSection} onSectionChange={setCurrentSection} isScrolled={isScrolled} />
 
       {/* Section indicators - más grandes en móvil */}
       <div className="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-40 space-y-4 md:space-y-3">
@@ -197,8 +216,10 @@ const Index = () => {
                 }`}
             >
               <div
+                ref={(el) => (sectionRefs.current[key] = el)}
                 className="h-screen overflow-y-auto"
                 onWheel={handleSectionWheel(key)}
+                onScroll={handleScroll}
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
                 onTouchEnd={handleTouchEnd(key)}

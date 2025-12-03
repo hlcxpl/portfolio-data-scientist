@@ -5,9 +5,10 @@ import { useTheme } from "next-themes";
 interface NavigationProps {
   currentSection: string;
   onSectionChange: (section: string) => void;
+  isScrolled: boolean;
 }
 
-const Navigation = ({ currentSection, onSectionChange }: NavigationProps) => {
+const Navigation = ({ currentSection, onSectionChange, isScrolled }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -32,14 +33,17 @@ const Navigation = ({ currentSection, onSectionChange }: NavigationProps) => {
   const isHeroSection = currentSection === 'hero';
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-colors duration-300">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-150 ${isScrolled
+      ? "bg-background/80 backdrop-blur-md border-b border-border/10 shadow-sm supports-[backdrop-filter]:bg-background/60 py-2"
+      : "bg-transparent py-4"
+      }`}>
       <div className="container mx-auto px-6 lg:px-12">
         <div className={`flex items-center h-20 ${isHeroSection ? 'justify-between' : 'justify-end'}`}>
           <button
             onClick={() => handleNavClick("hero")}
             className={`text-2xl font-display font-bold cursor-pointer transition-colors ${isHeroSection
-                ? 'text-black dark:!text-black'
-                : 'text-foreground hidden'
+              ? 'text-black dark:!text-black'
+              : 'text-foreground hidden'
               }`}
           >
             LOSD

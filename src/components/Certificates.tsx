@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, X } from "lucide-react";
 import BackgroundParticles from "./BackgroundParticles";
+import { useState, useEffect, useLayoutEffect, useRef } from "react";
+import { createBlendy } from "blendy";
 
 // Import all certificate images
 import cert1 from "@/assets/certificados/FT Movistar y SENCE - Diploma 40h.jpg";
@@ -26,6 +28,7 @@ import cert20 from "@/assets/certificados/dc570247381cb710aa7ec38e406d3001c1dbd7
 import cert21 from "@/assets/certificados/react-ii-g33-11661.png";
 
 interface Certificate {
+    id: string;
     title: string;
     issuer: string;
     date: string;
@@ -35,8 +38,34 @@ interface Certificate {
 }
 
 const Certificates = () => {
+    const [selectedCert, setSelectedCert] = useState<Certificate | null>(null);
+    const blendyRef = useRef<any>(null);
+
+    useEffect(() => {
+        blendyRef.current = createBlendy({ animation: 'dynamic' });
+    }, []);
+
+    useLayoutEffect(() => {
+        if (selectedCert) {
+            blendyRef.current.toggle(selectedCert.id);
+        }
+    }, [selectedCert]);
+
+    const handleCertClick = (cert: Certificate) => {
+        setSelectedCert(cert);
+    };
+
+    const handleClose = () => {
+        if (selectedCert) {
+            blendyRef.current.untoggle(selectedCert.id, () => {
+                setSelectedCert(null);
+            });
+        }
+    };
+
     const certificates: Certificate[] = [
         {
+            id: "cert-1",
             title: "DevOps Senior",
             issuer: "Globant",
             date: "2024",
@@ -45,6 +74,7 @@ const Certificates = () => {
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         },
         {
+            id: "cert-2",
             title: "Machine Learning",
             issuer: "Desafío Latam",
             date: "2024",
@@ -53,6 +83,7 @@ const Certificates = () => {
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         },
         {
+            id: "cert-3",
             title: "Modelos Avanzados y Redes Neuronales",
             issuer: "Desafío Latam",
             date: "2024",
@@ -61,6 +92,7 @@ const Certificates = () => {
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         },
         {
+            id: "cert-4",
             title: "Carrera Data Science",
             issuer: "Desafío Latam",
             date: "2024",
@@ -69,6 +101,7 @@ const Certificates = () => {
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         },
         {
+            id: "cert-5",
             title: "Análisis Estadístico con Python",
             issuer: "Desafío Latam",
             date: "2023",
@@ -77,6 +110,7 @@ const Certificates = () => {
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         },
         {
+            id: "cert-6",
             title: "Programación con Python para Análisis de Datos",
             issuer: "Desafío Latam",
             date: "2023",
@@ -85,6 +119,7 @@ const Certificates = () => {
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         },
         {
+            id: "cert-7",
             title: "SQL para Análisis de Datos",
             issuer: "Desafío Latam",
             date: "2023",
@@ -93,6 +128,7 @@ const Certificates = () => {
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         },
         {
+            id: "cert-8",
             title: "Visualización y Comunicación de Insights",
             issuer: "Desafío Latam",
             date: "2023",
@@ -101,6 +137,7 @@ const Certificates = () => {
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         },
         {
+            id: "cert-9",
             title: "Proyecto Final Fullstack",
             issuer: "Desafío Latam",
             date: "2023",
@@ -109,6 +146,7 @@ const Certificates = () => {
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         },
         {
+            id: "cert-10",
             title: "Backend con Node y Express",
             issuer: "Desafío Latam",
             date: "2023",
@@ -117,6 +155,7 @@ const Certificates = () => {
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         },
         {
+            id: "cert-11",
             title: "React I",
             issuer: "Desafío Latam",
             date: "2023",
@@ -125,6 +164,7 @@ const Certificates = () => {
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         },
         {
+            id: "cert-12",
             title: "React II",
             issuer: "Desafío Latam",
             date: "2023",
@@ -133,6 +173,7 @@ const Certificates = () => {
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         },
         {
+            id: "cert-13",
             title: "JavaScript para la Web",
             issuer: "Desafío Latam",
             date: "2023",
@@ -141,6 +182,7 @@ const Certificates = () => {
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         },
         {
+            id: "cert-14",
             title: "CSS Avanzado",
             issuer: "Desafío Latam",
             date: "2023",
@@ -149,6 +191,7 @@ const Certificates = () => {
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         },
         {
+            id: "cert-15",
             title: "Introducción al Desarrollo Web",
             issuer: "Desafío Latam",
             date: "2023",
@@ -157,6 +200,7 @@ const Certificates = () => {
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         },
         {
+            id: "cert-16",
             title: "SQL",
             issuer: "Desafío Latam",
             date: "2023",
@@ -165,6 +209,7 @@ const Certificates = () => {
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         },
         {
+            id: "cert-17",
             title: "Talento Futuro",
             issuer: "Movistar & SENCE",
             date: "2023",
@@ -173,6 +218,7 @@ const Certificates = () => {
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         },
         {
+            id: "cert-18",
             title: "Diploma 40 horas",
             issuer: "Movistar & SENCE",
             date: "2023",
@@ -181,6 +227,7 @@ const Certificates = () => {
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         },
         {
+            id: "cert-19",
             title: "Certificación Profesional",
             issuer: "Institución Certificadora",
             date: "2023",
@@ -189,6 +236,7 @@ const Certificates = () => {
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         },
         {
+            id: "cert-20",
             title: "Análisis Estadístico con Python - Módulos",
             issuer: "Desafío Latam",
             date: "2023",
@@ -197,6 +245,7 @@ const Certificates = () => {
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         },
         {
+            id: "cert-21",
             title: "SQL para Análisis de Datos - Avanzado",
             issuer: "Desafío Latam",
             date: "2023",
@@ -223,12 +272,16 @@ const Certificates = () => {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     {certificates.map((cert, index) => (
                         <div
-                            key={index}
-                            className="group bg-background/50 backdrop-blur-sm border border-border/50 rounded-xl overflow-hidden hover:border-foreground/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col animate-fade-in-up"
+                            key={cert.id}
+                            className="group bg-background/50 backdrop-blur-sm border border-border/50 rounded-xl overflow-hidden hover:border-foreground/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col animate-fade-in-up cursor-pointer"
                             style={{ animationDelay: `${index * 50}ms` }}
+                            onClick={() => handleCertClick(cert)}
                         >
-                            {/* Certificate Image */}
-                            <div className="relative overflow-hidden aspect-[4/3] bg-white dark:bg-gray-100">
+                            {/* Certificate Image - Source for Blendy */}
+                            <div
+                                className="relative overflow-hidden aspect-[4/3] bg-white dark:bg-gray-100"
+                                data-blendy-from={cert.id}
+                            >
                                 <img
                                     src={cert.image}
                                     alt={cert.title}
@@ -255,21 +308,72 @@ const Certificates = () => {
                                 <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 mb-4 flex-grow">
                                     {cert.description}
                                 </p>
-
-                                <Button
-                                    size="sm"
-                                    variant="outline"
-                                    className="w-full group-hover:bg-foreground group-hover:text-background transition-colors"
-                                    onClick={() => window.open(cert.link, '_blank')}
-                                >
-                                    <ExternalLink className="h-4 w-4 mr-2" />
-                                    Ver Certificado
-                                </Button>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
+
+            {/* Expanded Certificate Modal */}
+            {selectedCert && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={handleClose}>
+                    <div
+                        className="relative w-full max-w-4xl bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-2xl"
+                        onClick={(e) => e.stopPropagation()}
+                        data-blendy-to={selectedCert.id}
+                    >
+                        <button
+                            onClick={handleClose}
+                            className="absolute top-4 right-4 z-10 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors"
+                        >
+                            <X className="h-6 w-6" />
+                        </button>
+
+                        <div className="flex flex-col md:flex-row h-full max-h-[90vh]">
+                            <div className="w-full md:w-2/3 bg-gray-100 dark:bg-gray-800 flex items-center justify-center p-8">
+                                <img
+                                    src={selectedCert.image}
+                                    alt={selectedCert.title}
+                                    className="max-w-full max-h-[70vh] object-contain shadow-lg"
+                                />
+                            </div>
+
+                            <div className="w-full md:w-1/3 p-8 flex flex-col justify-center bg-background">
+                                <h3 className="text-2xl md:text-3xl font-display font-bold mb-2">
+                                    {selectedCert.title}
+                                </h3>
+                                <p className="text-lg text-primary font-medium mb-6">
+                                    {selectedCert.issuer}
+                                </p>
+
+                                <div className="space-y-4">
+                                    <div>
+                                        <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-1">Fecha</h4>
+                                        <p>{selectedCert.date}</p>
+                                    </div>
+
+                                    <div>
+                                        <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-1">Descripción</h4>
+                                        <p className="text-muted-foreground leading-relaxed">
+                                            {selectedCert.description}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="mt-8">
+                                    <Button
+                                        className="w-full"
+                                        onClick={() => window.open(selectedCert.link, '_blank')}
+                                    >
+                                        <ExternalLink className="h-4 w-4 mr-2" />
+                                        Ver en LinkedIn
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </section>
     );
 };

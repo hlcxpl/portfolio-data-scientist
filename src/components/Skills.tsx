@@ -1,4 +1,5 @@
 import BackgroundParticles from "./BackgroundParticles";
+import { useTheme } from "next-themes";
 
 interface Skill {
   name: string;
@@ -13,6 +14,13 @@ interface SkillCategory {
 }
 
 const Skills = () => {
+  const { theme } = useTheme();
+
+  // Match particle colors: dark for light mode, light for dark mode
+  const pixelColors = theme === 'dark'
+    ? ["#e2e8f0", "#f8fafc", "#cbd5e1"] // Light grays for dark mode
+    : ["#94a3b8", "#64748b", "#475569"]; // Darker grays for light mode
+
   const skillCategories: SkillCategory[] = [
     {
       title: "Frontend",
@@ -148,20 +156,22 @@ const Skills = () => {
                     key={skillIndex}
                     className="group relative flex flex-col items-center justify-center p-4 md:p-6 bg-background/50 backdrop-blur-sm border border-border/50 rounded-xl hover:border-foreground/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                   >
-                    <div className="w-10 h-10 md:w-12 md:h-12 mb-3 md:mb-4 relative flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-                      <img
-                        src={skill.customUrl || `https://skillicons.dev/icons?i=${skill.slug}`}
-                        alt={skill.name}
-                        className="w-full h-full object-contain transition-all duration-300 opacity-90 group-hover:opacity-100"
-                        onError={(e) => {
-                          // Fallback if icon fails
-                          (e.target as HTMLImageElement).style.display = 'none';
-                        }}
-                      />
+                    <div className="relative z-10 flex flex-col items-center">
+                      <div className="w-10 h-10 md:w-12 md:h-12 mb-3 md:mb-4 relative flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                        <img
+                          src={skill.customUrl || `https://skillicons.dev/icons?i=${skill.slug}`}
+                          alt={skill.name}
+                          className="w-full h-full object-contain transition-all duration-300 opacity-90 group-hover:opacity-100"
+                          onError={(e) => {
+                            // Fallback if icon fails
+                            (e.target as HTMLImageElement).style.display = 'none';
+                          }}
+                        />
+                      </div>
+                      <span className="text-xs md:text-sm font-medium text-muted-foreground text-center">
+                        {skill.name}
+                      </span>
                     </div>
-                    <span className="text-xs md:text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors text-center">
-                      {skill.name}
-                    </span>
                   </div>
                 ))}
               </div>
