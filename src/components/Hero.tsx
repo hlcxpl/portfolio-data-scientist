@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
 import SubtleParticles from "./SubtleParticles";
 import ProfileCard from "./ProfileCard/ProfileCard";
@@ -127,16 +126,8 @@ const Hero = ({ onNavigate }: HeroProps) => {
             </p>
           </div>
 
-          <Button
-            size="lg"
-            className="bg-foreground text-background hover:bg-foreground/90 text-sm md:text-base px-8 md:px-10 py-5 md:py-6 rounded-none font-medium tracking-wide w-full md:w-auto"
-            onClick={() => onNavigate("contact")}
-          >
-            Contactar
-          </Button>
-
-          {/* Social Icons - Below button on desktop only */}
-          <div className="hidden md:flex flex-row gap-4 mt-6 justify-start">
+          {/* Social Icons - Below info on desktop only */}
+          <div className="hidden md:flex flex-row gap-4 justify-start">
             <a
               href="https://github.com/hlcxpl"
               target="_blank"
