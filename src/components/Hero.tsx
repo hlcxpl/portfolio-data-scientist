@@ -81,31 +81,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
 
 
 
-        {/* Social Icons */}
-        <div className="absolute bottom-[2px] left-6 md:left-auto md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:right-8 flex flex-row gap-3 md:gap-4">
-          <a
-            href="https://github.com/hlcxpl"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black/60 hover:text-black transition-colors p-0 md:p-0"
-          >
-            <Github className="h-5 w-5 md:h-5 md:w-5" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/luisomarsanchezdiaz/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black/60 hover:text-black transition-colors p-0 md:p-0"
-          >
-            <Linkedin className="h-5 w-5 md:h-5 md:w-5" />
-          </a>
-          <a
-            href="mailto:hlcxpl@gmail.com"
-            className="text-black/60 hover:text-black transition-colors p-0 md:p-0"
-          >
-            <Mail className="h-5 w-5 md:h-5 md:w-5" />
-          </a>
-        </div>
+
       </div>
 
       {/* Right side - Content */}
@@ -132,6 +108,32 @@ const Hero = ({ onNavigate }: HeroProps) => {
           >
             Contactar
           </Button>
+
+          {/* Social Icons */}
+          <div className="flex flex-row gap-4 mt-6 justify-center md:justify-start">
+            <a
+              href="https://github.com/hlcxpl"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <Github className="h-6 w-6" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/luisomarsanchezdiaz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <Linkedin className="h-6 w-6" />
+            </a>
+            <a
+              href="mailto:hlcxpl@gmail.com"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <Mail className="h-6 w-6" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
