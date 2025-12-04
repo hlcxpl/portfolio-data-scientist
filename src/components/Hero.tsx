@@ -4,7 +4,7 @@ import SubtleParticles from "./SubtleParticles";
 import ProfileCard from "./ProfileCard/ProfileCard";
 import profileImage from "@/assets/Luis_2.png";
 import grainTexture from "@/assets/grain.png";
-import patternIcon from "@/assets/pattern-icon.png";
+import diamondIcon from "@/assets/diamond-icon.png";
 
 interface HeroProps {
   onNavigate: (section: string) => void;
@@ -61,7 +61,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
             avatarUrl={profileImage}
             miniAvatarUrl={profileImage}
             grainUrl={grainTexture}
-
+            iconUrl={diamondIcon}
             innerGradient="linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)"
             behindGlowEnabled={true}
             behindGlowColor="rgba(125, 190, 255, 0.67)"

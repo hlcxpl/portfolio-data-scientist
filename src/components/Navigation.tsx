@@ -38,16 +38,16 @@ const Navigation = ({ currentSection, onSectionChange, isScrolled }: NavigationP
       : "bg-transparent py-4"
       }`}>
       <div className="container mx-auto px-6 lg:px-12">
-        <div className={`flex items-center h-20 ${isHeroSection ? 'justify-between' : 'justify-end'}`}>
-          <button
-            onClick={() => handleNavClick("hero")}
-            className={`text-2xl font-display font-bold cursor-pointer transition-colors ${isHeroSection
-              ? 'text-black dark:!text-black'
-              : 'text-foreground hidden'
-              }`}
-          >
-            LOSD
-          </button>
+        <div className={`flex items-center h-20 ${isHeroSection ? 'justify-end md:justify-between' : 'justify-end'}`}>
+          {/* Brand - Only visible in hero section on desktop, left side */}
+          {isHeroSection && (
+            <button
+              onClick={() => handleNavClick("hero")}
+              className="hidden md:block text-2xl font-display font-bold cursor-pointer transition-colors text-black dark:!text-black"
+            >
+              LOSD
+            </button>
+          )}
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-12">
