@@ -7,6 +7,8 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Certificates from "@/components/Certificates";
 import Contact from "@/components/Contact";
+import Beams from "@/components/Beams";
+import BackgroundParticles from "@/components/BackgroundParticles";
 
 const Index = () => {
   const [currentSection, setCurrentSection] = useState("hero");
@@ -200,7 +202,15 @@ const Index = () => {
         ))}
       </div>
 
-      <main className="relative h-screen overflow-hidden">
+      {/* Global Backgrounds - Beams only in dark mode, Particles on top */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <div className="hidden dark:block absolute inset-0">
+          <Beams />
+        </div>
+        <BackgroundParticles />
+      </div>
+
+      <main className="relative h-screen overflow-hidden z-10">
         {Object.entries(sections).map(([key, Component]) => {
           const currentIndex = sectionOrder.indexOf(currentSection as (typeof sectionOrder)[number]);
           const sectionIndex = sectionOrder.indexOf(key as (typeof sectionOrder)[number]);
