@@ -87,7 +87,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
       <div className="w-full lg:w-1/2 bg-background flex items-center justify-center p-8 md:p-12 lg:p-20 min-h-[50vh] lg:min-h-full">
         <div className="max-w-xl">
           {/* Social Icons - Above name on mobile, below button on desktop */}
-          <div className="flex flex-row gap-4 mb-6 justify-center md:hidden">
+          <div className="flex flex-row gap-6 mb-6 justify-center md:hidden">
             <a
               href="https://github.com/hlcxpl"
               target="_blank"
