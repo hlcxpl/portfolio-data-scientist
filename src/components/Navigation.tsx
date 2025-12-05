@@ -20,8 +20,8 @@ const Navigation = ({ currentSection, onSectionChange, isScrolled }: NavigationP
   const navItems = [
     { label: "Inicio", id: "hero" },
     { label: "Sobre Mí", id: "about" },
-    { label: "Habilidades", id: "skills" },
     { label: "Proyectos", id: "projects" },
+    { label: "Habilidades", id: "skills" },
     { label: "Contacto", id: "contact" }
   ];
 
