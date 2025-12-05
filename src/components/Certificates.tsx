@@ -3,6 +3,7 @@ import { ExternalLink, X } from "lucide-react";
 import BackgroundParticles from "./BackgroundParticles";
 import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import { createBlendy } from "blendy";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // Import all certificate images
 import cert1 from "@/assets/certificados/FT Movistar y SENCE - Diploma 40h.jpg";
@@ -40,6 +41,7 @@ interface Certificate {
 const Certificates = () => {
     const [selectedCert, setSelectedCert] = useState<Certificate | null>(null);
     const blendyRef = useRef<any>(null);
+    const { t } = useLanguage();
 
     useEffect(() => {
         blendyRef.current = createBlendy({ animation: 'dynamic' });
@@ -261,11 +263,11 @@ const Certificates = () => {
             <div className="max-w-6xl mx-auto relative z-10">
                 <div className="mb-12 md:mb-20 animate-fade-in-up text-center md:text-left">
                     <h2 className="text-xs md:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4">
-                        Certificaciones
+                        {t.certificates.sectionTitle}
                     </h2>
                     <div className="w-12 md:w-16 h-[2px] bg-foreground mb-6 md:mb-8 mx-auto md:mx-0"></div>
                     <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold">
-                        Logros y Certificaciones
+                        {t.certificates.heading}
                     </h3>
                 </div>
 
@@ -348,12 +350,12 @@ const Certificates = () => {
 
                                 <div className="space-y-4">
                                     <div>
-                                        <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-1">Fecha</h4>
+                                        <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-1">{t.certificates.modalDate}</h4>
                                         <p>{selectedCert.date}</p>
                                     </div>
 
                                     <div>
-                                        <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-1">Descripción</h4>
+                                        <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-1">{t.certificates.modalDescription}</h4>
                                         <p className="text-muted-foreground leading-relaxed">
                                             {selectedCert.description}
                                         </p>
@@ -366,7 +368,7 @@ const Certificates = () => {
                                         onClick={() => window.open(selectedCert.link, '_blank')}
                                     >
                                         <ExternalLink className="h-4 w-4 mr-2" />
-                                        Ver en LinkedIn
+                                        {t.certificates.viewButton}
                                     </Button>
                                 </div>
                             </div>

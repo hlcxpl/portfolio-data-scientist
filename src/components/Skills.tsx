@@ -1,5 +1,6 @@
 import BackgroundParticles from "./BackgroundParticles";
 import { useTheme } from "next-themes";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface Skill {
   name: string;
@@ -15,6 +16,7 @@ interface SkillCategory {
 
 const Skills = () => {
   const { theme } = useTheme();
+  const { t } = useLanguage();
 
   // Match particle colors: dark for light mode, light for dark mode
   const pixelColors = theme === 'dark'
@@ -23,7 +25,7 @@ const Skills = () => {
 
   const skillCategories: SkillCategory[] = [
     {
-      title: "Frontend",
+      title: t.skills.categories.frontend,
       skills: [
         { name: "React", slug: "react" },
         { name: "Next.js", slug: "nextjs" },
@@ -39,7 +41,7 @@ const Skills = () => {
       ]
     },
     {
-      title: "Backend",
+      title: t.skills.categories.backend,
       skills: [
         { name: "Node.js", slug: "nodejs" },
         { name: "Express", slug: "express" },
@@ -53,7 +55,7 @@ const Skills = () => {
       ]
     },
     {
-      title: "Cloud & Infra",
+      title: t.skills.categories.cloudInfra,
       skills: [
         { name: "AWS", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
         { name: "Azure", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" },
@@ -63,7 +65,7 @@ const Skills = () => {
       ]
     },
     {
-      title: "Databases & ORMs",
+      title: t.skills.categories.databases,
       skills: [
         { name: "MySQL", slug: "mysql" },
         { name: "PostgreSQL", slug: "postgres" },
@@ -78,7 +80,7 @@ const Skills = () => {
       ]
     },
     {
-      title: "DevOps & Automation",
+      title: t.skills.categories.devops,
       skills: [
         { name: "Docker", slug: "docker" },
         { name: "Kubernetes", slug: "kubernetes" },
@@ -96,7 +98,7 @@ const Skills = () => {
       ]
     },
     {
-      title: "Data Science & AI",
+      title: t.skills.categories.dataScience,
       skills: [
         { name: "Pandas", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
         { name: "Numpy", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
@@ -106,7 +108,7 @@ const Skills = () => {
       ]
     },
     {
-      title: "Monitoring",
+      title: t.skills.categories.monitoring,
       skills: [
         { name: "Grafana", slug: "grafana" },
         { name: "Prometheus", slug: "prometheus" },
@@ -116,7 +118,7 @@ const Skills = () => {
       ]
     },
     {
-      title: "Tools & IDEs",
+      title: t.skills.categories.tools,
       skills: [
         { name: "VS Code", slug: "vscode" },
         { name: "Eclipse", slug: "eclipse" },
@@ -136,11 +138,11 @@ const Skills = () => {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="mb-12 md:mb-20 animate-fade-in-up text-center md:text-left">
           <h2 className="text-xs md:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4">
-            Habilidades
+            {t.skills.sectionTitle}
           </h2>
           <div className="w-12 md:w-16 h-[2px] bg-foreground mb-6 md:mb-8 mx-auto md:mx-0"></div>
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold">
-            Stack Tecnológico
+            {t.skills.heading}
           </h3>
         </div>
 

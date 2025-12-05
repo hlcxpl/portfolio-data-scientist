@@ -4,10 +4,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Github, Linkedin } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 import BackgroundParticles from "./BackgroundParticles";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -40,8 +42,8 @@ const Contact = () => {
 
       if (result.success) {
         toast({
-          title: "Mensaje enviado",
-          description: "Gracias por contactarme. Te responderé pronto.",
+          title: t.contact.toast.successTitle,
+          description: t.contact.toast.successDescription,
         });
         setFormData({ name: "", email: "", message: "" });
       } else {
@@ -50,8 +52,8 @@ const Contact = () => {
     } catch (error) {
       console.error('Error sending email:', error);
       toast({
-        title: "Error al enviar",
-        description: "Hubo un problema al enviar el mensaje. Por favor, intenta de nuevo.",
+        title: t.contact.toast.errorTitle,
+        description: t.contact.toast.errorDescription,
         variant: "destructive",
       });
     } finally {
@@ -62,25 +64,25 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Mail,
-      label: "Email",
+      label: t.contact.labels.email,
       value: "hlcxpl@gmail.com",
       href: "mailto:hlcxpl@gmail.com"
     },
     {
       icon: MapPin,
-      label: "Ubicación",
+      label: t.contact.labels.location,
       value: "Santiago, Chile",
       href: null
     },
     {
       icon: Github,
-      label: "GitHub",
+      label: t.contact.labels.github,
       value: "github.com/hlcxpl",
       href: "https://github.com/hlcxpl"
     },
     {
       icon: Linkedin,
-      label: "LinkedIn",
+      label: t.contact.labels.linkedin,
       value: "Luis Omar Sánchez Díaz",
       href: "https://www.linkedin.com/in/luisomarsanchezdiaz/"
     }
@@ -92,11 +94,11 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto pb-20 md:pb-32 relative z-10">
         <div className="mb-12 md:mb-20 animate-fade-in-up">
           <h2 className="text-xs md:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4">
-            Contacto
+            {t.contact.sectionTitle}
           </h2>
           <div className="w-12 md:w-16 h-[2px] bg-foreground mb-6 md:mb-8"></div>
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold">
-            Trabajemos Juntos
+            {t.contact.heading}
           </h3>
         </div>
 
@@ -104,7 +106,7 @@ const Contact = () => {
           <div className="space-y-8">
             <div>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8 md:mb-12">
-                ¿Tienes un proyecto en mente? Estoy disponible para nuevos desafíos y oportunidades de colaboración.
+                {t.contact.intro}
               </p>
               <div className="space-y-5 md:space-y-6">
                 {contactInfo.map((item, index) => {
@@ -144,14 +146,14 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
               <div>
                 <label htmlFor="name" className="block text-xs tracking-wider uppercase text-muted-foreground mb-2 md:mb-3">
-                  Nombre
+                  {t.contact.form.name}
                 </label>
                 <Input
                   id="name"
                   type="text"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="Tu nombre"
+                  placeholder={t.contact.form.namePlaceholder}
                   required
                   className="bg-background border-border focus:border-foreground rounded-none text-sm md:text-base"
                 />
@@ -159,14 +161,14 @@ const Contact = () => {
 
               <div>
                 <label htmlFor="email" className="block text-xs tracking-wider uppercase text-muted-foreground mb-2 md:mb-3">
-                  Email
+                  {t.contact.form.email}
                 </label>
                 <Input
                   id="email"
                   type="email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  placeholder="tu@email.com"
+                  placeholder={t.contact.form.emailPlaceholder}
                   required
                   className="bg-background border-border focus:border-foreground rounded-none text-sm md:text-base"
                 />
@@ -174,13 +176,13 @@ const Contact = () => {
 
               <div>
                 <label htmlFor="message" className="block text-xs tracking-wider uppercase text-muted-foreground mb-2 md:mb-3">
-                  Mensaje
+                  {t.contact.form.message}
                 </label>
                 <Textarea
                   id="message"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="¿En qué puedo ayudarte?"
+                  placeholder={t.contact.form.messagePlaceholder}
                   required
                   rows={6}
                   className="bg-background border-border focus:border-foreground resize-none rounded-none text-sm md:text-base"
@@ -193,7 +195,7 @@ const Contact = () => {
                 disabled={isSubmitting}
               >
                 <Mail className="mr-2 h-4 w-4 md:h-5 md:w-5" />
-                {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
+                {isSubmitting ? t.contact.form.submitting : t.contact.form.submit}
               </Button>
             </form>
           </div>
@@ -202,7 +204,7 @@ const Contact = () => {
         {/* Copyright section */}
         <div className="mt-12 md:mt-20 pt-6 md:pt-8 border-t border-border text-center">
           <p className="text-xs md:text-sm text-muted-foreground">
-            Created by Luis Omar Sánchez
+            {t.contact.copyright}
           </p>
         </div>
       </div>

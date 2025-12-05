@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import BackgroundParticles from "./BackgroundParticles";
+import { useLanguage } from "@/contexts/LanguageContext";
 import culliganImg from "@/assets/culligan.png";
 import globalConexusImg from "@/assets/global-conexus.png";
 import antofagastaImg from "@/assets/antofagasta-minerals.png";
@@ -9,74 +10,75 @@ import wiseVisionImg from "@/assets/wise-vision.png";
 import parkfacilImg from "@/assets/parkfacil.png";
 
 const Projects = () => {
+  const { t } = useLanguage();
   const projects = [
     {
-      title: "ParkFacil - Gestión de Estacionamientos",
-      description: "Plataforma completa para optimizar la administración de estacionamientos. Incluye módulos de reportería, gestión de datos SQL Server, y CI/CD con GitHub Actions.",
+      title: t.projects.projects.parkfacil.title,
+      description: t.projects.projects.parkfacil.description,
       tags: ["Node.js", "SQL Server", "GitHub Actions", "PM2"],
       image: parkfacilImg,
       github: null,
       demo: null
     },
     {
-      title: "Culligan Water - Suite de Aplicaciones",
-      description: "Desarrollo de múltiples herramientas: 4DX para OKRs, sistema de inventario de dispensadores, módulo de contabilidad de activos, planificación de rutas y sistema de bonificaciones para técnicos.",
+      title: t.projects.projects.culligan.title,
+      description: t.projects.projects.culligan.description,
       tags: ["React", "Node.js", "Prisma", "SQL", "Agile"],
       image: culliganImg,
       github: null,
       demo: null
     },
     {
-      title: "IoT Mining Platform - Global Conexus",
-      description: "Plataforma IoT para telemetría de equipos mineros. Procesamiento de datos en tiempo real con Apache Kafka, dashboards React y servicios backend en Java.",
+      title: t.projects.projects.iot.title,
+      description: t.projects.projects.iot.description,
       tags: ["Java", "Apache Kafka", "React", "Azure", "IoT"],
       image: globalConexusImg,
       github: null,
       demo: null
     },
     {
-      title: "Mining Analytics Dashboard",
-      description: "Dashboards interactivos con Dash (Plotly) para análisis operativo minero. Integración con Azure Data Lake y algoritmos de optimización para planes de excavadoras.",
+      title: t.projects.projects.mining.title,
+      description: t.projects.projects.mining.description,
       tags: ["Python", "Dash", "Flask", "Azure", "Data Analytics"],
       image: antofagastaImg,
       github: null,
       demo: null
     },
     {
-      title: "Cognitiva - Plataforma de Agentes IA",
-      description: "Plataforma de gestión de campañas con agentes conversacionales personalizables. Integración con Watson Assistant, Rasa NLU y OpenAI APIs.",
+      title: t.projects.projects.cognitiva.title,
+      description: t.projects.projects.cognitiva.description,
       tags: ["Node.js", "React", "Python", "IBM Watson", "OpenAI"],
       image: cognitivaImg,
       github: null,
       demo: null
     },
     {
-      title: "ELK Stack Monitoring - WISE VISION",
-      description: "Clusters de Elasticsearch para monitoreo en tiempo real de servicios e infraestructura. Configuración de índices, alertas con Logstash, FluentBit y Kibana.",
+      title: t.projects.projects.elk.title,
+      description: t.projects.projects.elk.description,
       tags: ["Elasticsearch", "Logstash", "Kibana", "DevOps"],
       image: wiseVisionImg,
       github: "https://github.com/hlcxpl/elk-template",
       demo: null
     },
     {
-      title: "DevOps Portfolio & CI/CD",
-      description: "Portafolio de proyectos DevOps: ArgoCD GitOps, Kubernetes, Docker, infraestructura como código, y pipelines automatizados con GitHub Actions.",
+      title: t.projects.projects.devops.title,
+      description: t.projects.projects.devops.description,
       tags: ["Kubernetes", "ArgoCD", "Docker", "GitOps", "CI/CD"],
       image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&h=500&fit=crop",
       github: "https://github.com/hlcxpl/mastering_devops_g1",
       demo: null
     },
     {
-      title: "TeleFruver FruitFlow",
-      description: "Sistema de gestión y logística para distribución de frutas. Frontend desarrollado en TypeScript con arquitectura escalable.",
+      title: t.projects.projects.telefruver.title,
+      description: t.projects.projects.telefruver.description,
       tags: ["TypeScript", "React", "Node.js", "Logistics"],
       image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&h=500&fit=crop",
       github: "https://github.com/hlcxpl/telefruver-fruitflow",
       demo: null
     },
     {
-      title: "Django Auto Motor App",
-      description: "Aplicación web Django para gestión de inventario automotriz. Sistema completo de administración con panel de control y reportes.",
+      title: t.projects.projects.django.title,
+      description: t.projects.projects.django.description,
       tags: ["Python", "Django", "PostgreSQL", "API REST"],
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=500&fit=crop",
       github: "https://github.com/hlcxpl/django-auto-motor-app",
@@ -90,11 +92,11 @@ const Projects = () => {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="mb-12 md:mb-20 animate-fade-in-up text-center md:text-left">
           <h2 className="text-xs md:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4">
-            Proyectos
+            {t.projects.sectionTitle}
           </h2>
           <div className="w-12 md:w-16 h-[2px] bg-foreground mb-6 md:mb-8 mx-auto md:mx-0"></div>
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold">
-            Trabajos Destacados
+            {t.projects.heading}
           </h3>
         </div>
 
@@ -119,7 +121,7 @@ const Projects = () => {
                       onClick={() => window.open(project.github, '_blank')}
                     >
                       <Github className="h-4 w-4 mr-2" />
-                      Código
+                      {t.projects.codeButton}
                     </Button>
                   )}
                   {project.demo && (
@@ -129,7 +131,7 @@ const Projects = () => {
                       onClick={() => window.open(project.demo, '_blank')}
                     >
                       <ExternalLink className="h-4 w-4 mr-2" />
-                      Ver Demo
+                      {t.projects.demoButton}
                     </Button>
                   )}
                 </div>

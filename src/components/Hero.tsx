@@ -2,6 +2,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import SubtleParticles from "./SubtleParticles";
 import ProfileCard from "./ProfileCard/ProfileCard";
 import Beams from "./Beams";
+import { useLanguage } from "@/contexts/LanguageContext";
 import profileImage from "@/assets/Luis_2.png";
 import grainTexture from "@/assets/grain.png";
 import diamondIcon from "@/assets/diamond-icon.png";
@@ -11,6 +12,7 @@ interface HeroProps {
 }
 
 const Hero = ({ onNavigate }: HeroProps) => {
+  const { t } = useLanguage();
 
   return (
     <section className="relative min-h-full flex flex-col lg:flex-row">
@@ -72,8 +74,8 @@ const Hero = ({ onNavigate }: HeroProps) => {
             name="LUIS SÁNCHEZ"
             title="Software Engineer"
             handle="hlcxpl"
-            status="Disponible"
-            contactText="Contactar"
+            status={t.profileCard.status}
+            contactText={t.profileCard.contactButton}
             showUserInfo={true}
             onContactClick={() => onNavigate("contact")}
           />
@@ -125,10 +127,10 @@ const Hero = ({ onNavigate }: HeroProps) => {
           </h1>
           <div className="mb-8 md:mb-12">
             <p className="text-muted-foreground text-base md:text-lg mb-2">
-              Desarrollador Fullstack | Devops | Data Scientist
+              {t.hero.role}
             </p>
             <p className="text-xl md:text-2xl font-display font-semibold">
-              Ingeniero en Computación
+              {t.hero.title}
             </p>
           </div>
 
