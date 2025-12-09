@@ -96,6 +96,14 @@ export interface Translations {
         viewButton: string;
         modalDate: string;
         modalDescription: string;
+        items: {
+            [key: string]: {
+                title: string;
+                issuer: string;
+                date: string;
+                description: string;
+            };
+        };
     };
     profileCard: {
         status: string;
@@ -190,12 +198,12 @@ export const translations: Record<Language, Translations> = {
             categories: {
                 frontend: 'Frontend',
                 backend: 'Backend',
-                cloudInfra: 'Cloud & Infra',
-                databases: 'Databases & ORMs',
-                devops: 'DevOps & Automation',
-                dataScience: 'Data Science & AI',
-                monitoring: 'Monitoring',
-                tools: 'Tools & IDEs',
+                cloudInfra: 'Cloud e Infraestructura',
+                databases: 'Bases de Datos y ORMs',
+                devops: 'DevOps y Automatización',
+                dataScience: 'Data Science e IA',
+                monitoring: 'Monitoreo',
+                tools: 'Herramientas e IDEs',
             },
         },
         contact: {
@@ -232,6 +240,134 @@ export const translations: Record<Language, Translations> = {
             viewButton: 'Ver en LinkedIn',
             modalDate: 'Fecha',
             modalDescription: 'Descripción',
+            items: {
+                'cert-1': {
+                    title: 'DevOps Senior',
+                    issuer: 'Globant',
+                    date: '2024',
+                    description: 'Certificación avanzada en prácticas DevOps, CI/CD, automatización y gestión de infraestructura cloud.',
+                },
+                'cert-2': {
+                    title: 'Machine Learning',
+                    issuer: 'Desafío Latam',
+                    date: '2024',
+                    description: 'Fundamentos de Machine Learning, algoritmos supervisados y no supervisados, y aplicaciones prácticas.',
+                },
+                'cert-3': {
+                    title: 'Modelos Avanzados y Redes Neuronales',
+                    issuer: 'Desafío Latam',
+                    date: '2024',
+                    description: 'Deep Learning, redes neuronales convolucionales, recurrentes y arquitecturas avanzadas.',
+                },
+                'cert-4': {
+                    title: 'Carrera Data Science',
+                    issuer: 'Desafío Latam',
+                    date: '2024',
+                    description: 'Programa completo de Data Science incluyendo análisis estadístico, machine learning y visualización.',
+                },
+                'cert-5': {
+                    title: 'Análisis Estadístico con Python',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Análisis estadístico avanzado utilizando Python, Pandas, NumPy y bibliotecas de visualización.',
+                },
+                'cert-6': {
+                    title: 'Programación con Python para Análisis de Datos',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Fundamentos de Python aplicados al análisis de datos y procesamiento de información.',
+                },
+                'cert-7': {
+                    title: 'SQL para Análisis de Datos',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Consultas SQL avanzadas, optimización de queries y análisis de bases de datos relacionales.',
+                },
+                'cert-8': {
+                    title: 'Visualización y Comunicación de Insights',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Técnicas de visualización de datos y comunicación efectiva de resultados analíticos.',
+                },
+                'cert-9': {
+                    title: 'Proyecto Final Fullstack',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Desarrollo completo de aplicación fullstack integrando frontend, backend y base de datos.',
+                },
+                'cert-10': {
+                    title: 'Backend con Node y Express',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Desarrollo de APIs RESTful con Node.js y Express, autenticación y manejo de bases de datos.',
+                },
+                'cert-11': {
+                    title: 'React I',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Fundamentos de React: componentes, hooks, estado y ciclo de vida de aplicaciones.',
+                },
+                'cert-12': {
+                    title: 'React II',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'React avanzado: Context API, optimización, patrones de diseño y mejores prácticas.',
+                },
+                'cert-13': {
+                    title: 'JavaScript para la Web',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'JavaScript moderno, manipulación del DOM, eventos y programación asíncrona.',
+                },
+                'cert-14': {
+                    title: 'CSS Avanzado',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'CSS3 avanzado, Flexbox, Grid, animaciones y diseño responsive.',
+                },
+                'cert-15': {
+                    title: 'Introducción al Desarrollo Web',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Fundamentos de desarrollo web: HTML, CSS, y principios de diseño web.',
+                },
+                'cert-16': {
+                    title: 'SQL',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Fundamentos de SQL, diseño de bases de datos relacionales y consultas básicas.',
+                },
+                'cert-17': {
+                    title: 'Talento Futuro',
+                    issuer: 'Movistar & SENCE',
+                    date: '2023',
+                    description: 'Programa de formación en tecnologías digitales y desarrollo de habilidades técnicas.',
+                },
+                'cert-18': {
+                    title: 'Diploma 40 horas',
+                    issuer: 'Movistar & SENCE',
+                    date: '2023',
+                    description: 'Formación técnica intensiva en desarrollo de software y tecnologías web.',
+                },
+                'cert-19': {
+                    title: 'Certificación Profesional',
+                    issuer: 'Institución Certificadora',
+                    date: '2023',
+                    description: 'Certificación profesional en desarrollo de software y mejores prácticas de la industria.',
+                },
+                'cert-20': {
+                    title: 'Análisis Estadístico con Python - Módulos',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Módulos complementarios de análisis estadístico y procesamiento de datos.',
+                },
+                'cert-21': {
+                    title: 'SQL para Análisis de Datos - Avanzado',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Técnicas avanzadas de SQL para análisis de datos complejos y optimización.',
+                },
+            },
         },
         profileCard: {
             status: 'Disponible',
@@ -366,6 +502,134 @@ export const translations: Record<Language, Translations> = {
             viewButton: 'View on LinkedIn',
             modalDate: 'Date',
             modalDescription: 'Description',
+            items: {
+                'cert-1': {
+                    title: 'Senior DevOps',
+                    issuer: 'Globant',
+                    date: '2024',
+                    description: 'Advanced certification in DevOps practices, CI/CD, automation, and cloud infrastructure management.',
+                },
+                'cert-2': {
+                    title: 'Machine Learning',
+                    issuer: 'Desafío Latam',
+                    date: '2024',
+                    description: 'Machine Learning fundamentals, supervised and unsupervised algorithms, and practical applications.',
+                },
+                'cert-3': {
+                    title: 'Advanced Models and Neural Networks',
+                    issuer: 'Desafío Latam',
+                    date: '2024',
+                    description: 'Deep Learning, convolutional neural networks, recurrent networks, and advanced architectures.',
+                },
+                'cert-4': {
+                    title: 'Data Science Career',
+                    issuer: 'Desafío Latam',
+                    date: '2024',
+                    description: 'Complete Data Science program including statistical analysis, machine learning, and visualization.',
+                },
+                'cert-5': {
+                    title: 'Statistical Analysis with Python',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Advanced statistical analysis using Python, Pandas, NumPy, and visualization libraries.',
+                },
+                'cert-6': {
+                    title: 'Python Programming for Data Analysis',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Python fundamentals applied to data analysis and information processing.',
+                },
+                'cert-7': {
+                    title: 'SQL for Data Analysis',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Advanced SQL queries, query optimization, and relational database analysis.',
+                },
+                'cert-8': {
+                    title: 'Visualization and Insights Communication',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Data visualization techniques and effective communication of analytical results.',
+                },
+                'cert-9': {
+                    title: 'Fullstack Final Project',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Complete development of fullstack application integrating frontend, backend, and database.',
+                },
+                'cert-10': {
+                    title: 'Backend with Node and Express',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'RESTful API development with Node.js and Express, authentication, and database management.',
+                },
+                'cert-11': {
+                    title: 'React I',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'React fundamentals: components, hooks, state, and application lifecycle.',
+                },
+                'cert-12': {
+                    title: 'React II',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Advanced React: Context API, optimization, design patterns, and best practices.',
+                },
+                'cert-13': {
+                    title: 'JavaScript for the Web',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Modern JavaScript, DOM manipulation, events, and asynchronous programming.',
+                },
+                'cert-14': {
+                    title: 'Advanced CSS',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Advanced CSS3, Flexbox, Grid, animations, and responsive design.',
+                },
+                'cert-15': {
+                    title: 'Introduction to Web Development',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Web development fundamentals: HTML, CSS, and web design principles.',
+                },
+                'cert-16': {
+                    title: 'SQL',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'SQL fundamentals, relational database design, and basic queries.',
+                },
+                'cert-17': {
+                    title: 'Future Talent',
+                    issuer: 'Movistar & SENCE',
+                    date: '2023',
+                    description: 'Training program in digital technologies and technical skills development.',
+                },
+                'cert-18': {
+                    title: '40-Hour Diploma',
+                    issuer: 'Movistar & SENCE',
+                    date: '2023',
+                    description: 'Intensive technical training in software development and web technologies.',
+                },
+                'cert-19': {
+                    title: 'Professional Certification',
+                    issuer: 'Certifying Institution',
+                    date: '2023',
+                    description: 'Professional certification in software development and industry best practices.',
+                },
+                'cert-20': {
+                    title: 'Statistical Analysis with Python - Modules',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Complementary modules in statistical analysis and data processing.',
+                },
+                'cert-21': {
+                    title: 'SQL for Data Analysis - Advanced',
+                    issuer: 'Desafío Latam',
+                    date: '2023',
+                    description: 'Advanced SQL techniques for complex data analysis and optimization.',
+                },
+            },
         },
         profileCard: {
             status: 'Available',

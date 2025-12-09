@@ -188,7 +188,7 @@ const Index = () => {
       <Navigation currentSection={currentSection} onSectionChange={setCurrentSection} isScrolled={isScrolled} />
 
       {/* Section indicators - más grandes en móvil */}
-      <div className="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-40 space-y-4 md:space-y-3">
+      <div className="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-40 space-y-4 md:space-y-3 bg-background/20 backdrop-blur-sm p-3 rounded-full">
         {sectionOrder.map((section) => (
           <button
             key={section}
