@@ -27,31 +27,31 @@ const Skills = () => {
     {
       title: t.skills.categories.frontend,
       skills: [
-        { name: "React", slug: "react" },
-        { name: "Next.js", slug: "nextjs" },
-        { name: "HTML5", slug: "html" },
-        { name: "CSS3", slug: "css" },
-        { name: "Sass", customUrl: "https://cdn.simpleicons.org/sass" },
-        { name: "Less", slug: "less" },
-        { name: "Bootstrap", slug: "bootstrap" },
-        { name: "Tailwind CSS", slug: "tailwindcss" },
-        { name: "Material UI", slug: "materialui" },
-        { name: "TypeScript", slug: "ts" },
-        { name: "JavaScript", slug: "js" },
+        { name: "React", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+        { name: "Next.js", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+        { name: "HTML5", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+        { name: "CSS3", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+        { name: "Sass", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" },
+        { name: "Less", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/less/less-plain-wordmark.svg" },
+        { name: "Bootstrap", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
+        { name: "Tailwind CSS", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
+        { name: "Material UI", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" },
+        { name: "TypeScript", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+        { name: "JavaScript", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
       ]
     },
     {
       title: t.skills.categories.backend,
       skills: [
-        { name: "Node.js", slug: "nodejs" },
-        { name: "Express", slug: "express" },
-        { name: "NestJS", slug: "nestjs" },
-        { name: "Java", slug: "java" },
-        { name: "Spring Boot", slug: "spring" },
-        { name: "Python", slug: "python" },
-        { name: "Flask", slug: "flask" },
-        { name: "Django", slug: "django" },
-        { name: "Kafka", slug: "kafka" },
+        { name: "Node.js", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+        { name: "Express", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+        { name: "NestJS", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg" },
+        { name: "Java", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+        { name: "Spring Boot", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
+        { name: "Python", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+        { name: "Flask", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" },
+        { name: "Django", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
+        { name: "Kafka", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" },
       ]
     },
     {
@@ -60,21 +60,21 @@ const Skills = () => {
         { name: "AWS", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
         { name: "Azure", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" },
         { name: "Heroku", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg" },
-        { name: "Netlify", slug: "netlify" },
+        { name: "Netlify", customUrl: "https://cdn.simpleicons.org/netlify" },
         { name: "Railway", customUrl: "https://cdn.simpleicons.org/railway" },
       ]
     },
     {
       title: t.skills.categories.databases,
       skills: [
-        { name: "MySQL", slug: "mysql" },
-        { name: "PostgreSQL", slug: "postgres" },
-        { name: "MongoDB", slug: "mongodb" },
-        { name: "SQLite", slug: "sqlite" },
+        { name: "MySQL", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+        { name: "PostgreSQL", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+        { name: "MongoDB", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+        { name: "SQLite", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" },
         { name: "Oracle", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" },
         { name: "MariaDB", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mariadb/mariadb-original.svg" },
-        { name: "Sequelize", slug: "sequelize" },
-        { name: "Prisma", slug: "prisma" },
+        { name: "Sequelize", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg" },
+        { name: "Prisma", customUrl: "https://cdn.simpleicons.org/prisma" },
         { name: "SQLAlchemy", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original.svg" },
         { name: "Hibernate", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-plain.svg" },
       ]
@@ -82,18 +82,18 @@ const Skills = () => {
     {
       title: t.skills.categories.devops,
       skills: [
-        { name: "Docker", slug: "docker" },
-        { name: "Kubernetes", slug: "kubernetes" },
-        { name: "Terraform", slug: "terraform" },
-        { name: "Ansible", slug: "ansible" },
-        { name: "Linux", slug: "linux" },
-        { name: "Git", slug: "git" },
-        { name: "Bash", slug: "bash" },
+        { name: "Docker", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+        { name: "Kubernetes", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
+        { name: "Terraform", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" },
+        { name: "Ansible", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" },
+        { name: "Linux", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
+        { name: "Git", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+        { name: "Bash", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" },
         { name: "Helm", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/helm/helm-original.svg" },
         { name: "ArgoCD", customUrl: "https://cdn.simpleicons.org/argo/EF7B4D" },
-        { name: "GitHub Actions", slug: "githubactions" },
-        { name: "Jenkins", slug: "jenkins" },
-        { name: "GitLab", slug: "gitlab" },
+        { name: "GitHub Actions", customUrl: "https://cdn.simpleicons.org/githubactions" },
+        { name: "Jenkins", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" },
+        { name: "GitLab", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" },
         { name: "JMeter", customUrl: "https://cdn.simpleicons.org/apachejmeter" },
       ]
     },
@@ -103,31 +103,31 @@ const Skills = () => {
         { name: "Pandas", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
         { name: "Numpy", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
         { name: "Jupyter", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
-        { name: "TensorFlow", slug: "tensorflow" },
-        { name: "OpenCV", slug: "opencv" },
+        { name: "TensorFlow", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
+        { name: "OpenCV", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" },
       ]
     },
     {
       title: t.skills.categories.monitoring,
       skills: [
-        { name: "Grafana", slug: "grafana" },
-        { name: "Prometheus", slug: "prometheus" },
-        { name: "Elasticsearch", slug: "elasticsearch" },
-        { name: "Splunk", customUrl: "https://cdn.simpleicons.org/splunk/000000" },
+        { name: "Grafana", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" },
+        { name: "Prometheus", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" },
+        { name: "Elasticsearch", customUrl: "https://cdn.simpleicons.org/elasticsearch" },
+        { name: "Splunk", customUrl: "https://cdn.simpleicons.org/splunk" },
         { name: "Instana", customUrl: "https://static.cdnlogo.com/logos/i/55/instana-inc.svg" },
       ]
     },
     {
       title: t.skills.categories.tools,
       skills: [
-        { name: "VS Code", slug: "vscode" },
-        { name: "Eclipse", slug: "eclipse" },
-        { name: "Sublime", slug: "sublime" },
-        { name: "IntelliJ IDEA", slug: "idea" },
-        { name: "PyCharm", slug: "pycharm" },
-        { name: "NPM", slug: "npm" },
-        { name: "Yarn", slug: "yarn" },
-        { name: "PNPM", slug: "pnpm" },
+        { name: "VS Code", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+        { name: "Eclipse", customUrl: "https://cdn.simpleicons.org/eclipseide" },
+        { name: "Sublime", customUrl: "https://cdn.simpleicons.org/sublimetext" },
+        { name: "IntelliJ IDEA", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" },
+        { name: "PyCharm", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg" },
+        { name: "NPM", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" },
+        { name: "Yarn", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/yarn/yarn-original.svg" },
+        { name: "PNPM", customUrl: "https://cdn.simpleicons.org/pnpm" },
       ]
     }
   ];
@@ -165,8 +165,16 @@ const Skills = () => {
                           alt={skill.name}
                           className="w-full h-full object-contain transition-all duration-300 opacity-90 group-hover:opacity-100"
                           onError={(e) => {
-                            // Fallback if icon fails
-                            (e.target as HTMLImageElement).style.display = 'none';
+                            // Fallback: show first letter of skill name
+                            const img = e.target as HTMLImageElement;
+                            const parent = img.parentElement;
+                            if (parent && !parent.querySelector('.fallback-icon')) {
+                              img.style.display = 'none';
+                              const fallback = document.createElement('div');
+                              fallback.className = 'fallback-icon w-full h-full flex items-center justify-center bg-primary/10 rounded-lg text-primary font-bold text-lg';
+                              fallback.textContent = skill.name.charAt(0).toUpperCase();
+                              parent.appendChild(fallback);
+                            }
                           }}
                         />
                       </div>
