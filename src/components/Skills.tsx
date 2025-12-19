@@ -40,9 +40,9 @@ const Skills = () => {
         { name: "NumPy", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
         { name: "Scikit-learn", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" },
         { name: "TensorFlow", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
+        { name: "LLMs & AI Models", customUrl: "https://cdn.simpleicons.org/openai" },
         { name: "Keras", customUrl: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Keras_logo.svg" },
         { name: "PyTorch", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
-        { name: "Jupyter", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
       ]
     },
     {
@@ -50,21 +50,22 @@ const Skills = () => {
       skills: [
         { name: "Tableau", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg" },
         { name: "Power BI", customUrl: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" },
+        { name: "Looker", customUrl: "https://cdn.simpleicons.org/looker" },
+        { name: "Oracle Analytics", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" },
         { name: "Matplotlib", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" },
         { name: "Seaborn", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
         { name: "Plotly", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/plotly/plotly-original.svg" },
-        { name: "Excel", customUrl: "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg" },
       ]
     },
     {
       title: t.skills.categories.cloudBigData,
       skills: [
+        { name: "Pentaho", customUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Pentaho_Logo_Vertical.svg/1200px-Pentaho_Logo_Vertical.svg.png" },
         { name: "Spark", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg" },
         { name: "Hadoop", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hadoop/hadoop-original.svg" },
         { name: "AWS", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
         { name: "Azure", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" },
         { name: "Databricks", customUrl: "https://upload.wikimedia.org/wikipedia/commons/9/93/Databricks_Logo.png" },
-        { name: "Airflow", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg" },
       ]
     },
     {
@@ -80,11 +81,12 @@ const Skills = () => {
     {
       title: t.skills.categories.tools,
       skills: [
+        { name: "Google Colab", customUrl: "https://cdn.simpleicons.org/googlecolab" },
+        { name: "Jupyter", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
         { name: "Git", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
         { name: "Docker", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
         { name: "VS Code", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
         { name: "Anaconda", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/anaconda/anaconda-original.svg" },
-        { name: "Linux", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
       ]
     }
   ];
