@@ -5,28 +5,15 @@ import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import { createBlendy } from "blendy";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-// Import all certificate images
-import cert1 from "@/assets/certificados/FT Movistar y SENCE - Diploma 40h.jpg";
-import cert2 from "@/assets/certificados/Talento Futuro.png";
+// Import only the certificate images we need for Data Science certificates
 import cert3 from "@/assets/certificados/aprobacion-final-analisis-estadistico-con-python-g61-11661.png";
-import cert4 from "@/assets/certificados/aprobacion-final-proyecto-final-g33-11661.png";
-import cert5 from "@/assets/certificados/aprobacion-modulos-cursos-b-learning-analisis-estadistico-con-python-g61-11661.png";
-import cert6 from "@/assets/certificados/aprobacion-modulos-cursos-b-learning-backend-con-node-y-express-g33-11661.png";
-import cert7 from "@/assets/certificados/aprobacion-modulos-cursos-b-learning-css-avanzado-g33-11661.png";
-import cert8 from "@/assets/certificados/aprobacion-modulos-cursos-b-learning-introduccion-al-desarrollo-web-g33-11661.png";
-import cert9 from "@/assets/certificados/aprobacion-modulos-cursos-b-learning-javascript-para-la-web-g33-11661 (1).png";
 import cert10 from "@/assets/certificados/aprobacion-modulos-cursos-b-learning-programacion-con-python-para-el-analisis-de-datos-g61-11661.png";
-import cert11 from "@/assets/certificados/aprobacion-modulos-cursos-b-learning-react-i-g33-11661.png";
 import cert12 from "@/assets/certificados/aprobacion-modulos-cursos-b-learning-sql-g33-11661.png";
 import cert13 from "@/assets/certificados/aprobacion-modulos-cursos-b-learning-sql-para-el-analisis-de-datos-g61-11661 (1).png";
-import cert14 from "@/assets/certificados/aprobacion-modulos-cursos-b-learning-sql-para-el-analisis-de-datos-g61-11661.png";
 import cert15 from "@/assets/certificados/aprobacion-modulos-cursos-b-learning-visualizacion-y-comunicacion-de-insights-g61-11661 (1).png";
 import cert16 from "@/assets/certificados/certificacion-aprobacion-de-carrera-nuevo-modelos-avanzados-y-redes-neuronales-g71-11661(3).png";
-import cert17 from "@/assets/certificados/certificado-aprobacion-curso-curso-devops-senior-globant-11661(3).png";
 import cert18 from "@/assets/certificados/certificado-aprobacion-de-modulo-nuevo-machine-learning-g71-11661(3).png";
 import cert19 from "@/assets/certificados/certificado-aprobacion-de-modulo-nuevo-modelos-avanzados-y-redes-neuronales-g71-11661(3).png";
-import cert20 from "@/assets/certificados/dc570247381cb710aa7ec38e406d3001c1dbd799.jpg";
-import cert21 from "@/assets/certificados/react-ii-g33-11661.png";
 
 interface Certificate {
     id: string;
@@ -66,15 +53,6 @@ const Certificates = () => {
     };
 
     const certificates: Certificate[] = [
-        {
-            id: "cert-1",
-            title: t.certificates.items['cert-1'].title,
-            issuer: t.certificates.items['cert-1'].issuer,
-            date: t.certificates.items['cert-1'].date,
-            description: t.certificates.items['cert-1'].description,
-            image: cert17,
-            link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
-        },
         {
             id: "cert-2",
             title: t.certificates.items['cert-2'].title,
@@ -139,120 +117,12 @@ const Certificates = () => {
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         },
         {
-            id: "cert-9",
-            title: t.certificates.items['cert-9'].title,
-            issuer: t.certificates.items['cert-9'].issuer,
-            date: t.certificates.items['cert-9'].date,
-            description: t.certificates.items['cert-9'].description,
-            image: cert4,
-            link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
-        },
-        {
-            id: "cert-10",
-            title: t.certificates.items['cert-10'].title,
-            issuer: t.certificates.items['cert-10'].issuer,
-            date: t.certificates.items['cert-10'].date,
-            description: t.certificates.items['cert-10'].description,
-            image: cert6,
-            link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
-        },
-        {
-            id: "cert-11",
-            title: t.certificates.items['cert-11'].title,
-            issuer: t.certificates.items['cert-11'].issuer,
-            date: t.certificates.items['cert-11'].date,
-            description: t.certificates.items['cert-11'].description,
-            image: cert11,
-            link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
-        },
-        {
-            id: "cert-12",
-            title: t.certificates.items['cert-12'].title,
-            issuer: t.certificates.items['cert-12'].issuer,
-            date: t.certificates.items['cert-12'].date,
-            description: t.certificates.items['cert-12'].description,
-            image: cert21,
-            link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
-        },
-        {
-            id: "cert-13",
-            title: t.certificates.items['cert-13'].title,
-            issuer: t.certificates.items['cert-13'].issuer,
-            date: t.certificates.items['cert-13'].date,
-            description: t.certificates.items['cert-13'].description,
-            image: cert9,
-            link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
-        },
-        {
-            id: "cert-14",
-            title: t.certificates.items['cert-14'].title,
-            issuer: t.certificates.items['cert-14'].issuer,
-            date: t.certificates.items['cert-14'].date,
-            description: t.certificates.items['cert-14'].description,
-            image: cert7,
-            link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
-        },
-        {
-            id: "cert-15",
-            title: t.certificates.items['cert-15'].title,
-            issuer: t.certificates.items['cert-15'].issuer,
-            date: t.certificates.items['cert-15'].date,
-            description: t.certificates.items['cert-15'].description,
-            image: cert8,
-            link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
-        },
-        {
             id: "cert-16",
             title: t.certificates.items['cert-16'].title,
             issuer: t.certificates.items['cert-16'].issuer,
             date: t.certificates.items['cert-16'].date,
             description: t.certificates.items['cert-16'].description,
             image: cert12,
-            link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
-        },
-        {
-            id: "cert-17",
-            title: t.certificates.items['cert-17'].title,
-            issuer: t.certificates.items['cert-17'].issuer,
-            date: t.certificates.items['cert-17'].date,
-            description: t.certificates.items['cert-17'].description,
-            image: cert2,
-            link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
-        },
-        {
-            id: "cert-18",
-            title: t.certificates.items['cert-18'].title,
-            issuer: t.certificates.items['cert-18'].issuer,
-            date: t.certificates.items['cert-18'].date,
-            description: t.certificates.items['cert-18'].description,
-            image: cert1,
-            link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
-        },
-        {
-            id: "cert-19",
-            title: t.certificates.items['cert-19'].title,
-            issuer: t.certificates.items['cert-19'].issuer,
-            date: t.certificates.items['cert-19'].date,
-            description: t.certificates.items['cert-19'].description,
-            image: cert20,
-            link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
-        },
-        {
-            id: "cert-20",
-            title: t.certificates.items['cert-20'].title,
-            issuer: t.certificates.items['cert-20'].issuer,
-            date: t.certificates.items['cert-20'].date,
-            description: t.certificates.items['cert-20'].description,
-            image: cert5,
-            link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
-        },
-        {
-            id: "cert-21",
-            title: t.certificates.items['cert-21'].title,
-            issuer: t.certificates.items['cert-21'].issuer,
-            date: t.certificates.items['cert-21'].date,
-            description: t.certificates.items['cert-21'].description,
-            image: cert14,
             link: "https://www.linkedin.com/in/luisomarsanchezdiaz/details/certifications/"
         }
     ];
