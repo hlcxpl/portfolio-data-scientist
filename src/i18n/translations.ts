@@ -124,71 +124,83 @@ export const translations: Record<Language, Translations> = {
             darkMode: 'Modo Oscuro',
         },
         hero: {
-            role: 'Desarrollador Fullstack | Devops | Data Scientist',
+            role: 'Data Scientist | Data Analyst | Data Engineer',
             title: 'Ingeniero en Computación',
         },
         about: {
             sectionTitle: 'Sobre Mí',
-            heading: 'Full Stack Developer | DevOps | Data Scientist',
+            heading: 'Data Scientist | Data Analyst | Data Engineer',
             paragraph1: 'Ingeniero en Computación egresado de la Universidad Dr. Rafael Belloso Chacín (2012-2017). Actualmente en Santiago, Chile.',
-            paragraph2: 'Profesional con más de 6+ años de experiencia profesional desarrollando soluciones tecnológicas escalables para distintos sectores, incluyendo minería, banca y servicios digitales. He trabajado en la construcción de plataformas web, automatización de procesos y despliegues en la nube, integrando buenas prácticas de arquitectura, seguridad y rendimiento.',
-            paragraph3: 'Domino tecnologías como React, Node.js, Python, Java, Docker, Kubernetes, GitHub Actions, Jenkins, Kafka y entornos cloud (Azure, AWS, Cloudflare). Mi enfoque es entregar soluciones robustas, eficientes y orientadas a la experiencia del usuario.',
+            paragraph2: 'Profesional con experiencia en ciencia de datos, análisis estadístico y machine learning aplicado a diversos sectores como minería, banca y servicios digitales. Me especializo en transformar datos en insights accionables mediante análisis exploratorio, modelado predictivo y visualizaciones interactivas.',
+            paragraph3: 'Domino tecnologías como Python, Pandas, NumPy, Scikit-learn, TensorFlow, SQL, Tableau, Apache Kafka y entornos cloud (Azure, AWS). Mi enfoque es extraer valor de los datos para impulsar decisiones estratégicas basadas en evidencia.',
             highlights: {
                 webDev: {
-                    title: 'Desarrollo Web',
-                    description: 'Especializado en crear aplicaciones web modernas y escalables con las últimas tecnologías.',
+                    title: 'Análisis de Datos',
+                    description: 'Especializado en análisis exploratorio, limpieza de datos y generación de insights mediante Python y SQL.',
                 },
                 innovation: {
-                    title: 'Innovación',
-                    description: 'Siempre buscando nuevas formas de resolver problemas y optimizar procesos.',
+                    title: 'Machine Learning',
+                    description: 'Desarrollo de modelos predictivos y algoritmos de ML para resolver problemas de negocio complejos.',
                 },
                 leadership: {
-                    title: 'Liderazgo',
-                    description: 'Experiencia liderando equipos y proyectos de desarrollo en el sector privado.',
+                    title: 'Visualización',
+                    description: 'Creación de dashboards interactivos con Tableau y Plotly para comunicar resultados de forma efectiva.',
                 },
             },
         },
         projects: {
             sectionTitle: 'Proyectos',
-            heading: 'Trabajos Destacados',
+            heading: 'Proyectos de Data Science',
             codeButton: 'Código',
-            demoButton: 'Ver Demo',
+            demoButton: 'Ver Dashboard',
             projects: {
-                parkfacil: {
-                    title: 'ParkFacil - Gestión de Estacionamientos',
-                    description: 'Plataforma completa para optimizar la administración de estacionamientos. Incluye módulos de reportería, gestión de datos SQL Server, y CI/CD con GitHub Actions.',
+                dpyml1: {
+                    title: 'DpyML-1: Primer Desafío Machine Learning',
+                    description: 'Primer desafío de Machine Learning con Python. Análisis exploratorio de datos, preprocesamiento y construcción de modelos predictivos básicos.',
                 },
-                culligan: {
-                    title: 'Culligan Water - Suite de Aplicaciones',
-                    description: 'Desarrollo de múltiples herramientas: 4DX para OKRs, sistema de inventario de dispensadores, módulo de contabilidad de activos, planificación de rutas y sistema de bonificaciones para técnicos.',
+                dpyml2: {
+                    title: 'DpyML-2: Análisis y Modelado Avanzado',
+                    description: 'Proyecto de análisis de datos y modelado con técnicas avanzadas de ML. Incluye feature engineering y optimización de hiperparámetros.',
                 },
-                iot: {
-                    title: 'IoT Mining Platform - Global Conexus',
-                    description: 'Plataforma IoT para telemetría de equipos mineros. Procesamiento de datos en tiempo real con Apache Kafka, dashboards React y servicios backend en Java.',
+                dpyml3: {
+                    title: 'DpyML-3: Clasificación y Regresión',
+                    description: 'Implementación de algoritmos de clasificación y regresión. Evaluación de modelos con métricas de rendimiento y validación cruzada.',
+                },
+                dpyml4: {
+                    title: 'DpyML-4: Aprendizaje No Supervisado',
+                    description: 'Técnicas de clustering y reducción de dimensionalidad. Análisis de componentes principales (PCA) y segmentación de datos.',
+                },
+                dpyml5: {
+                    title: 'DpyML-5: Series Temporales',
+                    description: 'Análisis y predicción de series temporales. Modelos ARIMA, forecasting y detección de tendencias y estacionalidad.',
+                },
+                dpyml6: {
+                    title: 'DpyML-6: Deep Learning Básico',
+                    description: 'Introducción a redes neuronales con TensorFlow/Keras. Construcción de modelos de clasificación de imágenes y texto.',
+                },
+                dpyml7: {
+                    title: 'DpyML-7: Proyecto Integrador ML',
+                    description: 'Proyecto integrador aplicando múltiples técnicas de ML. Pipeline completo desde la ingesta de datos hasta el deployment del modelo.',
+                },
+                dpymlprueba: {
+                    title: 'DpyML-Prueba: Evaluación Final',
+                    description: 'Proyecto de evaluación final del programa de Machine Learning. Solución end-to-end de un problema de negocio real.',
+                },
+                tableau1: {
+                    title: 'Tableau: Análisis de Ventas por Región',
+                    description: 'Dashboard interactivo de análisis de ventas. Visualización de KPIs, tendencias temporales y distribución geográfica de ventas.',
+                },
+                tableau2: {
+                    title: 'Tableau: Prueba Desafío Latam',
+                    description: 'Dashboard de análisis de datos para Desafío Latam. Visualizaciones interactivas con filtros dinámicos y métricas clave.',
+                },
+                tableau3: {
+                    title: 'Tableau: Dashboard Analítico Completo',
+                    description: 'Dashboard analítico con múltiples vistas y KPIs. Integración de datos de múltiples fuentes y storytelling visual.',
                 },
                 mining: {
                     title: 'Mining Analytics Dashboard',
-                    description: 'Dashboards interactivos con Dash (Plotly) para análisis operativo minero. Integración con Azure Data Lake y algoritmos de optimización para planes de excavadoras.',
-                },
-                cognitiva: {
-                    title: 'Cognitiva - Plataforma de Agentes IA',
-                    description: 'Plataforma de gestión de campañas con agentes conversacionales personalizables. Integración con Watson Assistant, Rasa NLU y OpenAI APIs.',
-                },
-                elk: {
-                    title: 'ELK Stack Monitoring - WISE VISION',
-                    description: 'Clusters de Elasticsearch para monitoreo en tiempo real de servicios e infraestructura. Configuración de índices, alertas con Logstash, FluentBit y Kibana.',
-                },
-                devops: {
-                    title: 'DevOps Portfolio & CI/CD',
-                    description: 'Portafolio de proyectos DevOps: ArgoCD GitOps, Kubernetes, Docker, infraestructura como código, y pipelines automatizados con GitHub Actions.',
-                },
-                telefruver: {
-                    title: 'TeleFruver FruitFlow',
-                    description: 'Sistema de gestión y logística para distribución de frutas. Frontend desarrollado en TypeScript con arquitectura escalable.',
-                },
-                django: {
-                    title: 'Django Auto Motor App',
-                    description: 'Aplicación web Django para gestión de inventario automotriz. Sistema completo de administración con panel de control y reportes.',
+                    description: 'Dashboards interactivos con Dash (Plotly) para análisis operativo minero. Integración con Azure Data Lake y algoritmos de optimización.',
                 },
             },
         },
@@ -241,12 +253,6 @@ export const translations: Record<Language, Translations> = {
             modalDate: 'Fecha',
             modalDescription: 'Descripción',
             items: {
-                'cert-1': {
-                    title: 'DevOps Senior',
-                    issuer: 'Globant',
-                    date: '2024',
-                    description: 'Certificación avanzada en prácticas DevOps, CI/CD, automatización y gestión de infraestructura cloud.',
-                },
                 'cert-2': {
                     title: 'Machine Learning',
                     issuer: 'Desafío Latam',
@@ -289,83 +295,11 @@ export const translations: Record<Language, Translations> = {
                     date: '2023',
                     description: 'Técnicas de visualización de datos y comunicación efectiva de resultados analíticos.',
                 },
-                'cert-9': {
-                    title: 'Proyecto Final Fullstack',
-                    issuer: 'Desafío Latam',
-                    date: '2023',
-                    description: 'Desarrollo completo de aplicación fullstack integrando frontend, backend y base de datos.',
-                },
-                'cert-10': {
-                    title: 'Backend con Node y Express',
-                    issuer: 'Desafío Latam',
-                    date: '2023',
-                    description: 'Desarrollo de APIs RESTful con Node.js y Express, autenticación y manejo de bases de datos.',
-                },
-                'cert-11': {
-                    title: 'React I',
-                    issuer: 'Desafío Latam',
-                    date: '2023',
-                    description: 'Fundamentos de React: componentes, hooks, estado y ciclo de vida de aplicaciones.',
-                },
-                'cert-12': {
-                    title: 'React II',
-                    issuer: 'Desafío Latam',
-                    date: '2023',
-                    description: 'React avanzado: Context API, optimización, patrones de diseño y mejores prácticas.',
-                },
-                'cert-13': {
-                    title: 'JavaScript para la Web',
-                    issuer: 'Desafío Latam',
-                    date: '2023',
-                    description: 'JavaScript moderno, manipulación del DOM, eventos y programación asíncrona.',
-                },
-                'cert-14': {
-                    title: 'CSS Avanzado',
-                    issuer: 'Desafío Latam',
-                    date: '2023',
-                    description: 'CSS3 avanzado, Flexbox, Grid, animaciones y diseño responsive.',
-                },
-                'cert-15': {
-                    title: 'Introducción al Desarrollo Web',
-                    issuer: 'Desafío Latam',
-                    date: '2023',
-                    description: 'Fundamentos de desarrollo web: HTML, CSS, y principios de diseño web.',
-                },
                 'cert-16': {
                     title: 'SQL',
                     issuer: 'Desafío Latam',
                     date: '2023',
                     description: 'Fundamentos de SQL, diseño de bases de datos relacionales y consultas básicas.',
-                },
-                'cert-17': {
-                    title: 'Talento Futuro',
-                    issuer: 'Movistar & SENCE',
-                    date: '2023',
-                    description: 'Programa de formación en tecnologías digitales y desarrollo de habilidades técnicas.',
-                },
-                'cert-18': {
-                    title: 'Diploma 40 horas',
-                    issuer: 'Movistar & SENCE',
-                    date: '2023',
-                    description: 'Formación técnica intensiva en desarrollo de software y tecnologías web.',
-                },
-                'cert-19': {
-                    title: 'Certificación Profesional',
-                    issuer: 'Institución Certificadora',
-                    date: '2023',
-                    description: 'Certificación profesional en desarrollo de software y mejores prácticas de la industria.',
-                },
-                'cert-20': {
-                    title: 'Análisis Estadístico con Python - Módulos',
-                    issuer: 'Desafío Latam',
-                    date: '2023',
-                    description: 'Módulos complementarios de análisis estadístico y procesamiento de datos.',
-                },
-                'cert-21': {
-                    title: 'SQL para Análisis de Datos - Avanzado',
-                    issuer: 'Desafío Latam',
-                    date: '2023',
-                    description: 'Técnicas avanzadas de SQL para análisis de datos complejos y optimización.',
                 },
             },
         },
@@ -386,71 +320,83 @@ export const translations: Record<Language, Translations> = {
             darkMode: 'Dark Mode',
         },
         hero: {
-            role: 'Fullstack Developer | DevOps | Data Scientist',
+            role: 'Data Scientist | Data Analyst | Data Engineer',
             title: 'Computer Engineer',
         },
         about: {
             sectionTitle: 'About Me',
-            heading: 'Full Stack Developer | DevOps | Data Scientist',
+            heading: 'Data Scientist | Data Analyst | Data Engineer',
             paragraph1: 'Computer Engineer graduated from Dr. Rafael Belloso Chacín University (2012-2017). Currently based in Santiago, Chile.',
-            paragraph2: 'Professional with over 6+ years of experience developing scalable technological solutions for various sectors, including mining, banking, and digital services. I have worked on building web platforms, process automation, and cloud deployments, integrating best practices in architecture, security, and performance.',
-            paragraph3: 'I master technologies such as React, Node.js, Python, Java, Docker, Kubernetes, GitHub Actions, Jenkins, Kafka, and cloud environments (Azure, AWS, Cloudflare). My focus is to deliver robust, efficient, and user-experience-oriented solutions.',
+            paragraph2: 'Professional with experience in data science, statistical analysis, and machine learning applied to various sectors including mining, banking, and digital services. I specialize in transforming data into actionable insights through exploratory analysis, predictive modeling, and interactive visualizations.',
+            paragraph3: 'I master technologies such as Python, Pandas, NumPy, Scikit-learn, TensorFlow, SQL, Tableau, Apache Kafka, and cloud environments (Azure, AWS). My focus is to extract value from data to drive evidence-based strategic decisions.',
             highlights: {
                 webDev: {
-                    title: 'Web Development',
-                    description: 'Specialized in creating modern and scalable web applications with the latest technologies.',
+                    title: 'Data Analysis',
+                    description: 'Specialized in exploratory analysis, data cleaning, and insight generation using Python and SQL.',
                 },
                 innovation: {
-                    title: 'Innovation',
-                    description: 'Always looking for new ways to solve problems and optimize processes.',
+                    title: 'Machine Learning',
+                    description: 'Development of predictive models and ML algorithms to solve complex business problems.',
                 },
                 leadership: {
-                    title: 'Leadership',
-                    description: 'Experience leading development teams and projects in the private sector.',
+                    title: 'Visualization',
+                    description: 'Creating interactive dashboards with Tableau and Plotly to effectively communicate results.',
                 },
             },
         },
         projects: {
             sectionTitle: 'Projects',
-            heading: 'Featured Work',
+            heading: 'Data Science Projects',
             codeButton: 'Code',
-            demoButton: 'View Demo',
+            demoButton: 'View Dashboard',
             projects: {
-                parkfacil: {
-                    title: 'ParkFacil - Parking Management',
-                    description: 'Complete platform to optimize parking lot administration. Includes reporting modules, SQL Server data management, and CI/CD with GitHub Actions.',
+                dpyml1: {
+                    title: 'DpyML-1: First Machine Learning Challenge',
+                    description: 'First Machine Learning challenge with Python. Exploratory data analysis, preprocessing, and building basic predictive models.',
                 },
-                culligan: {
-                    title: 'Culligan Water - Application Suite',
-                    description: 'Development of multiple tools: 4DX for OKRs, dispenser inventory system, asset accounting module, route planning, and technician bonus system.',
+                dpyml2: {
+                    title: 'DpyML-2: Advanced Analysis and Modeling',
+                    description: 'Data analysis and modeling project with advanced ML techniques. Includes feature engineering and hyperparameter optimization.',
                 },
-                iot: {
-                    title: 'IoT Mining Platform - Global Conexus',
-                    description: 'IoT platform for mining equipment telemetry. Real-time data processing with Apache Kafka, React dashboards, and Java backend services.',
+                dpyml3: {
+                    title: 'DpyML-3: Classification and Regression',
+                    description: 'Implementation of classification and regression algorithms. Model evaluation with performance metrics and cross-validation.',
+                },
+                dpyml4: {
+                    title: 'DpyML-4: Unsupervised Learning',
+                    description: 'Clustering and dimensionality reduction techniques. Principal Component Analysis (PCA) and data segmentation.',
+                },
+                dpyml5: {
+                    title: 'DpyML-5: Time Series',
+                    description: 'Time series analysis and prediction. ARIMA models, forecasting, and trend and seasonality detection.',
+                },
+                dpyml6: {
+                    title: 'DpyML-6: Basic Deep Learning',
+                    description: 'Introduction to neural networks with TensorFlow/Keras. Building image and text classification models.',
+                },
+                dpyml7: {
+                    title: 'DpyML-7: ML Integrator Project',
+                    description: 'Integrator project applying multiple ML techniques. Complete pipeline from data ingestion to model deployment.',
+                },
+                dpymlprueba: {
+                    title: 'DpyML-Test: Final Evaluation',
+                    description: 'Final evaluation project for the Machine Learning program. End-to-end solution for a real business problem.',
+                },
+                tableau1: {
+                    title: 'Tableau: Sales Analysis by Region',
+                    description: 'Interactive sales analysis dashboard. Visualization of KPIs, temporal trends, and geographic distribution of sales.',
+                },
+                tableau2: {
+                    title: 'Tableau: Desafío Latam Test',
+                    description: 'Data analysis dashboard for Desafío Latam. Interactive visualizations with dynamic filters and key metrics.',
+                },
+                tableau3: {
+                    title: 'Tableau: Complete Analytical Dashboard',
+                    description: 'Analytical dashboard with multiple views and KPIs. Integration of data from multiple sources and visual storytelling.',
                 },
                 mining: {
                     title: 'Mining Analytics Dashboard',
-                    description: 'Interactive dashboards with Dash (Plotly) for mining operational analysis. Integration with Azure Data Lake and optimization algorithms for excavator plans.',
-                },
-                cognitiva: {
-                    title: 'Cognitiva - AI Agents Platform',
-                    description: 'Campaign management platform with customizable conversational agents. Integration with Watson Assistant, Rasa NLU, and OpenAI APIs.',
-                },
-                elk: {
-                    title: 'ELK Stack Monitoring - WISE VISION',
-                    description: 'Elasticsearch clusters for real-time service and infrastructure monitoring. Index configuration, alerts with Logstash, FluentBit, and Kibana.',
-                },
-                devops: {
-                    title: 'DevOps Portfolio & CI/CD',
-                    description: 'DevOps project portfolio: ArgoCD GitOps, Kubernetes, Docker, infrastructure as code, and automated pipelines with GitHub Actions.',
-                },
-                telefruver: {
-                    title: 'TeleFruver FruitFlow',
-                    description: 'Management and logistics system for fruit distribution. Frontend developed in TypeScript with scalable architecture.',
-                },
-                django: {
-                    title: 'Django Auto Motor App',
-                    description: 'Django web application for automotive inventory management. Complete administration system with control panel and reports.',
+                    description: 'Interactive dashboards with Dash (Plotly) for mining operational analysis. Integration with Azure Data Lake and optimization algorithms.',
                 },
             },
         },
@@ -503,12 +449,6 @@ export const translations: Record<Language, Translations> = {
             modalDate: 'Date',
             modalDescription: 'Description',
             items: {
-                'cert-1': {
-                    title: 'Senior DevOps',
-                    issuer: 'Globant',
-                    date: '2024',
-                    description: 'Advanced certification in DevOps practices, CI/CD, automation, and cloud infrastructure management.',
-                },
                 'cert-2': {
                     title: 'Machine Learning',
                     issuer: 'Desafío Latam',
@@ -551,83 +491,11 @@ export const translations: Record<Language, Translations> = {
                     date: '2023',
                     description: 'Data visualization techniques and effective communication of analytical results.',
                 },
-                'cert-9': {
-                    title: 'Fullstack Final Project',
-                    issuer: 'Desafío Latam',
-                    date: '2023',
-                    description: 'Complete development of fullstack application integrating frontend, backend, and database.',
-                },
-                'cert-10': {
-                    title: 'Backend with Node and Express',
-                    issuer: 'Desafío Latam',
-                    date: '2023',
-                    description: 'RESTful API development with Node.js and Express, authentication, and database management.',
-                },
-                'cert-11': {
-                    title: 'React I',
-                    issuer: 'Desafío Latam',
-                    date: '2023',
-                    description: 'React fundamentals: components, hooks, state, and application lifecycle.',
-                },
-                'cert-12': {
-                    title: 'React II',
-                    issuer: 'Desafío Latam',
-                    date: '2023',
-                    description: 'Advanced React: Context API, optimization, design patterns, and best practices.',
-                },
-                'cert-13': {
-                    title: 'JavaScript for the Web',
-                    issuer: 'Desafío Latam',
-                    date: '2023',
-                    description: 'Modern JavaScript, DOM manipulation, events, and asynchronous programming.',
-                },
-                'cert-14': {
-                    title: 'Advanced CSS',
-                    issuer: 'Desafío Latam',
-                    date: '2023',
-                    description: 'Advanced CSS3, Flexbox, Grid, animations, and responsive design.',
-                },
-                'cert-15': {
-                    title: 'Introduction to Web Development',
-                    issuer: 'Desafío Latam',
-                    date: '2023',
-                    description: 'Web development fundamentals: HTML, CSS, and web design principles.',
-                },
                 'cert-16': {
                     title: 'SQL',
                     issuer: 'Desafío Latam',
                     date: '2023',
                     description: 'SQL fundamentals, relational database design, and basic queries.',
-                },
-                'cert-17': {
-                    title: 'Future Talent',
-                    issuer: 'Movistar & SENCE',
-                    date: '2023',
-                    description: 'Training program in digital technologies and technical skills development.',
-                },
-                'cert-18': {
-                    title: '40-Hour Diploma',
-                    issuer: 'Movistar & SENCE',
-                    date: '2023',
-                    description: 'Intensive technical training in software development and web technologies.',
-                },
-                'cert-19': {
-                    title: 'Professional Certification',
-                    issuer: 'Certifying Institution',
-                    date: '2023',
-                    description: 'Professional certification in software development and industry best practices.',
-                },
-                'cert-20': {
-                    title: 'Statistical Analysis with Python - Modules',
-                    issuer: 'Desafío Latam',
-                    date: '2023',
-                    description: 'Complementary modules in statistical analysis and data processing.',
-                },
-                'cert-21': {
-                    title: 'SQL for Data Analysis - Advanced',
-                    issuer: 'Desafío Latam',
-                    date: '2023',
-                    description: 'Advanced SQL techniques for complex data analysis and optimization.',
                 },
             },
         },

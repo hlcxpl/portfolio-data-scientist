@@ -2,86 +2,105 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import BackgroundParticles from "./BackgroundParticles";
 import { useLanguage } from "@/contexts/LanguageContext";
-import culliganImg from "@/assets/culligan.png";
-import globalConexusImg from "@/assets/global-conexus.png";
 import antofagastaImg from "@/assets/antofagasta-minerals.png";
-import cognitivaImg from "@/assets/cognitiva.png";
-import wiseVisionImg from "@/assets/wise-vision.png";
-import parkfacilImg from "@/assets/parkfacil.png";
 
 const Projects = () => {
   const { t } = useLanguage();
   const projects = [
     {
-      title: t.projects.projects.parkfacil.title,
-      description: t.projects.projects.parkfacil.description,
-      tags: ["Node.js", "SQL Server", "GitHub Actions", "PM2"],
-      image: parkfacilImg,
-      github: null,
+      title: t.projects.projects.dpyml1.title,
+      description: t.projects.projects.dpyml1.description,
+      tags: ["Python", "Pandas", "Scikit-learn", "Jupyter"],
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
+      github: "https://github.com/hlcxpl/DpyML-1",
       demo: null
     },
     {
-      title: t.projects.projects.culligan.title,
-      description: t.projects.projects.culligan.description,
-      tags: ["React", "Node.js", "Prisma", "SQL", "Agile"],
-      image: culliganImg,
-      github: null,
+      title: t.projects.projects.dpyml2.title,
+      description: t.projects.projects.dpyml2.description,
+      tags: ["Python", "Feature Engineering", "ML", "Optimization"],
+      image: "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?w=800&h=500&fit=crop",
+      github: "https://github.com/hlcxpl/DpyML-2",
       demo: null
     },
     {
-      title: t.projects.projects.iot.title,
-      description: t.projects.projects.iot.description,
-      tags: ["Java", "Apache Kafka", "React", "Azure", "IoT"],
-      image: globalConexusImg,
-      github: null,
+      title: t.projects.projects.dpyml3.title,
+      description: t.projects.projects.dpyml3.description,
+      tags: ["Classification", "Regression", "Cross-Validation", "Metrics"],
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
+      github: "https://github.com/hlcxpl/DpyML-3",
       demo: null
+    },
+    {
+      title: t.projects.projects.dpyml4.title,
+      description: t.projects.projects.dpyml4.description,
+      tags: ["Clustering", "PCA", "Unsupervised Learning", "Segmentation"],
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
+      github: "https://github.com/hlcxpl/DpyML-4",
+      demo: null
+    },
+    {
+      title: t.projects.projects.dpyml5.title,
+      description: t.projects.projects.dpyml5.description,
+      tags: ["Time Series", "ARIMA", "Forecasting", "Python"],
+      image: "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&h=500&fit=crop",
+      github: "https://github.com/hlcxpl/DpyML-5",
+      demo: null
+    },
+    {
+      title: t.projects.projects.dpyml6.title,
+      description: t.projects.projects.dpyml6.description,
+      tags: ["Deep Learning", "TensorFlow", "Keras", "Neural Networks"],
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop",
+      github: "https://github.com/hlcxpl/DpyML-6",
+      demo: null
+    },
+    {
+      title: t.projects.projects.dpyml7.title,
+      description: t.projects.projects.dpyml7.description,
+      tags: ["ML Pipeline", "End-to-End", "Deployment", "Python"],
+      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=500&fit=crop",
+      github: "https://github.com/hlcxpl/DpyML-7",
+      demo: null
+    },
+    {
+      title: t.projects.projects.dpymlprueba.title,
+      description: t.projects.projects.dpymlprueba.description,
+      tags: ["Machine Learning", "Business Problem", "Python", "End-to-End"],
+      image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=500&fit=crop",
+      github: "https://github.com/hlcxpl/DpyML-Prueba",
+      demo: null
+    },
+    {
+      title: t.projects.projects.tableau1.title,
+      description: t.projects.projects.tableau1.description,
+      tags: ["Tableau", "Data Visualization", "KPIs", "Analytics"],
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
+      github: null,
+      demo: "https://public.tableau.com/app/profile/luis.sanchez2290/viz/Desafo_Analizando_las_Ventas_Luis_Sanchez/PorcentajedeVentaporRegin"
+    },
+    {
+      title: t.projects.projects.tableau2.title,
+      description: t.projects.projects.tableau2.description,
+      tags: ["Tableau", "Interactive Dashboards", "Filters", "Metrics"],
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
+      github: null,
+      demo: "https://public.tableau.com/app/profile/luis.sanchez2290/viz/PruebaDesafioLatam-LuisSanchez/4_1"
+    },
+    {
+      title: t.projects.projects.tableau3.title,
+      description: t.projects.projects.tableau3.description,
+      tags: ["Tableau", "Multi-Source Data", "Storytelling", "Dashboards"],
+      image: "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?w=800&h=500&fit=crop",
+      github: null,
+      demo: "https://public.tableau.com/app/profile/luis.sanchez2290/viz/Luis_Sanchez_Desafio_Latam/Pregunta4"
     },
     {
       title: t.projects.projects.mining.title,
       description: t.projects.projects.mining.description,
-      tags: ["Python", "Dash", "Flask", "Azure", "Data Analytics"],
+      tags: ["Python", "Dash", "Plotly", "Azure", "Data Analytics"],
       image: antofagastaImg,
       github: null,
-      demo: null
-    },
-    {
-      title: t.projects.projects.cognitiva.title,
-      description: t.projects.projects.cognitiva.description,
-      tags: ["Node.js", "React", "Python", "IBM Watson", "OpenAI"],
-      image: cognitivaImg,
-      github: null,
-      demo: null
-    },
-    {
-      title: t.projects.projects.elk.title,
-      description: t.projects.projects.elk.description,
-      tags: ["Elasticsearch", "Logstash", "Kibana", "DevOps"],
-      image: wiseVisionImg,
-      github: "https://github.com/hlcxpl/elk-template",
-      demo: null
-    },
-    {
-      title: t.projects.projects.devops.title,
-      description: t.projects.projects.devops.description,
-      tags: ["Kubernetes", "ArgoCD", "Docker", "GitOps", "CI/CD"],
-      image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&h=500&fit=crop",
-      github: "https://github.com/hlcxpl/mastering_devops_g1",
-      demo: null
-    },
-    {
-      title: t.projects.projects.telefruver.title,
-      description: t.projects.projects.telefruver.description,
-      tags: ["TypeScript", "React", "Node.js", "Logistics"],
-      image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&h=500&fit=crop",
-      github: "https://github.com/hlcxpl/telefruver-fruitflow",
-      demo: null
-    },
-    {
-      title: t.projects.projects.django.title,
-      description: t.projects.projects.django.description,
-      tags: ["Python", "Django", "PostgreSQL", "API REST"],
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=500&fit=crop",
-      github: "https://github.com/hlcxpl/django-auto-motor-app",
       demo: null
     }
   ];
