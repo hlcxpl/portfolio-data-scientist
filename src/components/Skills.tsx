@@ -25,109 +25,66 @@ const Skills = () => {
 
   const skillCategories: SkillCategory[] = [
     {
-      title: t.skills.categories.frontend,
+      title: t.skills.categories.programming,
       skills: [
-        { name: "React", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-        { name: "Next.js", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
-        { name: "HTML5", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-        { name: "CSS3", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-        { name: "Sass", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" },
-        { name: "Less", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/less/less-plain-wordmark.svg" },
-        { name: "Bootstrap", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
-        { name: "Tailwind CSS", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
-        { name: "Material UI", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" },
-        { name: "TypeScript", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-        { name: "JavaScript", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-      ]
-    },
-    {
-      title: t.skills.categories.backend,
-      skills: [
-        { name: "Node.js", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-        { name: "Express", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
-        { name: "NestJS", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg" },
-        { name: "Java", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
-        { name: "Spring Boot", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
         { name: "Python", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-        { name: "Flask", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" },
-        { name: "Django", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
-        { name: "Kafka", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" },
-      ]
-    },
-    {
-      title: t.skills.categories.cloudInfra,
-      skills: [
-        { name: "AWS", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
-        { name: "Azure", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" },
-        { name: "Heroku", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg" },
-        { name: "Netlify", customUrl: "https://cdn.simpleicons.org/netlify" },
-        { name: "Railway", customUrl: "https://cdn.simpleicons.org/railway" },
-      ]
-    },
-    {
-      title: t.skills.categories.databases,
-      skills: [
-        { name: "MySQL", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-        { name: "PostgreSQL", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
-        { name: "MongoDB", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-        { name: "SQLite", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" },
-        { name: "Oracle", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" },
-        { name: "MariaDB", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mariadb/mariadb-original.svg" },
-        { name: "Sequelize", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg" },
-        { name: "Prisma", customUrl: "https://cdn.simpleicons.org/prisma" },
-        { name: "SQLAlchemy", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original.svg" },
-        { name: "Hibernate", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-plain.svg" },
-      ]
-    },
-    {
-      title: t.skills.categories.devops,
-      skills: [
-        { name: "Docker", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-        { name: "Kubernetes", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
-        { name: "Terraform", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" },
-        { name: "Ansible", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" },
-        { name: "Linux", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
-        { name: "Git", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-        { name: "Bash", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" },
-        { name: "Helm", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/helm/helm-original.svg" },
-        { name: "ArgoCD", customUrl: "https://cdn.simpleicons.org/argo/EF7B4D" },
-        { name: "GitHub Actions", customUrl: "https://cdn.simpleicons.org/githubactions" },
-        { name: "Jenkins", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" },
-        { name: "GitLab", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" },
-        { name: "JMeter", customUrl: "https://cdn.simpleicons.org/apachejmeter" },
+        { name: "SQL", customUrl: "https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" },
+        { name: "R", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" },
+        { name: "Scala", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scala/scala-original.svg" },
       ]
     },
     {
       title: t.skills.categories.dataScience,
       skills: [
         { name: "Pandas", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
-        { name: "Numpy", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
-        { name: "Jupyter", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
+        { name: "NumPy", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
+        { name: "Scikit-learn", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" },
         { name: "TensorFlow", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
-        { name: "OpenCV", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" },
+        { name: "Keras", customUrl: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Keras_logo.svg" },
+        { name: "PyTorch", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
+        { name: "Jupyter", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
       ]
     },
     {
-      title: t.skills.categories.monitoring,
+      title: t.skills.categories.analysis,
       skills: [
-        { name: "Grafana", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" },
-        { name: "Prometheus", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" },
-        { name: "Elasticsearch", customUrl: "https://cdn.simpleicons.org/elasticsearch" },
-        { name: "Splunk", customUrl: "https://cdn.simpleicons.org/splunk" },
-        { name: "Instana", customUrl: "https://static.cdnlogo.com/logos/i/55/instana-inc.svg" },
+        { name: "Tableau", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg" },
+        { name: "Power BI", customUrl: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" },
+        { name: "Matplotlib", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" },
+        { name: "Seaborn", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+        { name: "Plotly", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/plotly/plotly-original.svg" },
+        { name: "Excel", customUrl: "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg" },
+      ]
+    },
+    {
+      title: t.skills.categories.cloudBigData,
+      skills: [
+        { name: "Spark", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg" },
+        { name: "Hadoop", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hadoop/hadoop-original.svg" },
+        { name: "AWS", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
+        { name: "Azure", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" },
+        { name: "Databricks", customUrl: "https://upload.wikimedia.org/wikipedia/commons/9/93/Databricks_Logo.png" },
+        { name: "Airflow", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg" },
+      ]
+    },
+    {
+      title: t.skills.categories.databases,
+      skills: [
+        { name: "PostgreSQL", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+        { name: "MySQL", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+        { name: "MongoDB", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+        { name: "SQL Server", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" },
+        { name: "Snowflake", customUrl: "https://upload.wikimedia.org/wikipedia/commons/5/59/Snowflake_Logo.svg" },
       ]
     },
     {
       title: t.skills.categories.tools,
       skills: [
+        { name: "Git", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+        { name: "Docker", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
         { name: "VS Code", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-        { name: "Eclipse", customUrl: "https://cdn.simpleicons.org/eclipseide" },
-        { name: "Sublime", customUrl: "https://cdn.simpleicons.org/sublimetext" },
-        { name: "IntelliJ IDEA", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" },
-        { name: "PyCharm", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg" },
-        { name: "NPM", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" },
-        { name: "Yarn", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/yarn/yarn-original.svg" },
-        { name: "PNPM", customUrl: "https://cdn.simpleicons.org/pnpm" },
+        { name: "Anaconda", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/anaconda/anaconda-original.svg" },
+        { name: "Linux", customUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
       ]
     }
   ];

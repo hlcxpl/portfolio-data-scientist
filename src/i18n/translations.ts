@@ -52,13 +52,11 @@ export interface Translations {
         sectionTitle: string;
         heading: string;
         categories: {
-            frontend: string;
-            backend: string;
-            cloudInfra: string;
-            databases: string;
-            devops: string;
+            programming: string;
             dataScience: string;
-            monitoring: string;
+            analysis: string;
+            cloudBigData: string;
+            databases: string;
             tools: string;
         };
     };
@@ -208,14 +206,12 @@ export const translations: Record<Language, Translations> = {
             sectionTitle: 'Habilidades',
             heading: 'Stack Tecnológico',
             categories: {
-                frontend: 'Frontend',
-                backend: 'Backend',
-                cloudInfra: 'Cloud e Infraestructura',
-                databases: 'Bases de Datos y ORMs',
-                devops: 'DevOps y Automatización',
-                dataScience: 'Data Science e IA',
-                monitoring: 'Monitoreo',
-                tools: 'Herramientas e IDEs',
+                programming: 'Lenguajes y Core',
+                dataScience: 'Data Science y Machine Learning',
+                analysis: 'Análisis y Visualización',
+                cloudBigData: 'Cloud y Big Data',
+                databases: 'Bases de Datos',
+                tools: 'Herramientas y Entornos',
             },
         },
         contact: {
@@ -404,14 +400,12 @@ export const translations: Record<Language, Translations> = {
             sectionTitle: 'Skills',
             heading: 'Technology Stack',
             categories: {
-                frontend: 'Frontend',
-                backend: 'Backend',
-                cloudInfra: 'Cloud & Infra',
-                databases: 'Databases & ORMs',
-                devops: 'DevOps & Automation',
-                dataScience: 'Data Science & AI',
-                monitoring: 'Monitoring',
-                tools: 'Tools & IDEs',
+                programming: 'Programming & Core',
+                dataScience: 'Data Science & ML',
+                analysis: 'Analytics & Visualization',
+                cloudBigData: 'Cloud & Big Data',
+                databases: 'Databases',
+                tools: 'Tools & Environments',
             },
         },
         contact: {
