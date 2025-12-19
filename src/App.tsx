@@ -12,7 +12,7 @@ const queryClient = new QueryClient();
 
 const App = () => {
   // Detectar si estamos en GitHub Pages o en desarrollo
-  const basename = import.meta.env.MODE === 'production' ? '/portfolio-polish' : '';
+  const basename = import.meta.env.MODE === 'production' ? '/portfolio-data-scientist' : '';
 
   return (
     <QueryClientProvider client={queryClient}>
